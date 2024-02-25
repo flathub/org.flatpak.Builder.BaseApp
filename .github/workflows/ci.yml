@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  smoketests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: actions/cache@v3
+      with:
+        path: .flatpak-builder
+        key: ${{ runner.os }}-flatpak-builder
+
+    - name: Install latest flatpak and flatpak-builder
+      run: |
+        sudo add-apt-repository ppa:flatpak/stable
+        sudo apt-get update
+        sudo apt-get install -y flatpak flatpak-builder
+
+    - name: Set up flathub remote
+      run: |
+        flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+    # TODO: Remove this workaround once flatpak-builder v1.2.3 is available through the above PPA.
+    - name: Allow file:// clones with git>=2.38.1
+      run: |
+        git config --global protocol.file.allow always
+
+    - name: Build org.flatpak.Builder
+      run: |
+        git clone --depth=1 --branch master --recursive --single-branch https://github.com/flathub/org.flatpak.Builder.git && cd org.flatpak.Builder
+        flatpak-builder --verbose --user --sandbox --force-clean --repo=repo \
+          --install-deps-from=flathub --default-branch=localtest --ccache \
+          --install builddir org.flatpak.Builder.json
+
+    - name: Check if org.flatpak.Builder launches
+      run: |
+        flatpak run org.flatpak.Builder//localtest --version
+
+    - name: Check if appstreamcli launches
+      run: |
+        flatpak run --command=appstreamcli org.flatpak.Builder//localtest vercmp 1 2
+
+    - name: Check if desktop-file-validate launches
+      run: |
+        flatpak run --command=desktop-file-validate org.flatpak.Builder//localtest --version
+
+    - name: Check if ostree launches
+      run: |
+        flatpak run --command=ostree org.flatpak.Builder//localtest --version
+
+    - name: Sanity check the linter
+      run: |
+        flatpak run --command=flatpak-builder-lint org.flatpak.Builder//localtest --exceptions manifest org.flatpak.Builder.json
+        flatpak run --command=flatpak-builder-lint org.flatpak.Builder//localtest --exceptions builddir builddir
+        flatpak run --command=flatpak-builder-lint org.flatpak.Builder//localtest --exceptions repo repo
+
+    - name: Build org.freedesktop.appstream-glib with org.flatpak.Builder
+      run: |
+        git clone --depth=1 --branch master --single-branch https://github.com/flathub/org.freedesktop.appstream-glib
+        cd org.freedesktop.appstream-glib
+        dbus-run-session flatpak run org.flatpak.Builder//localtest --verbose --user --sandbox \
+          --force-clean --install-deps-from=flathub --default-branch=localtest \
+          --state-dir=../.flatpak-builder --ccache --disable-cache \
+          --install builddir org.freedesktop.appstream-glib.json
+
+    - name: Build com.jetbrains.GoLand with org.flatpak.Builder
+      run: |
+        git clone --depth=1 --branch master --recursive --single-branch https://github.com/flathub/com.jetbrains.GoLand
+        cd com.jetbrains.GoLand
+        dbus-run-session flatpak run org.flatpak.Builder//localtest --verbose --user --sandbox \
+          --force-clean --install-deps-from=flathub --default-branch=localtest \
+          --state-dir=../.flatpak-builder --ccache --disable-cache --mirror-screenshots-url=https://domain.tld \
+          --install builddir com.jetbrains.GoLand.yaml
