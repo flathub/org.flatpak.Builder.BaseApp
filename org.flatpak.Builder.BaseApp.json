@@ -348,8 +348,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ostreedev/ostree/releases/download/v2024.4/libostree-2024.4.tar.xz",
-                    "sha256": "63c9190821333ac7373e0d923e4c2766b25ebdcfdf4efb44cb5928c6589d9fcb",
+                    "url": "https://github.com/ostreedev/ostree/releases/download/v2024.5/libostree-2024.5.tar.xz",
+                    "sha256": "4149163c9759fd7aed048443ee7512dab4157a2c5313b115a5c8bc56884184d7",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/ostreedev/ostree/releases/latest",
