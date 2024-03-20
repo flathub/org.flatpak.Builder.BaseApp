@@ -7,8 +7,8 @@
     "sources": [
         {
             "type": "archive",
-            "sha256": "f11eefb646768e3f53e2185f6d3b01b4cb02112c2c60e65a4b5875150287ff97",
-            "url": "https://github.com/cli/cli/releases/download/v2.44.1/gh_2.44.1_linux_amd64.tar.gz",
+            "sha256": "c671d450d7c0e95c84fbc6996591fc851d396848acd53e589ee388031cee9330",
+            "url": "https://github.com/cli/cli/releases/download/v2.46.0/gh_2.46.0_linux_amd64.tar.gz",
             "only-arches": [
                 "x86_64"
             ],
@@ -21,8 +21,8 @@
         },
         {
             "type": "archive",
-            "sha256": "0f9f7b04514d8accc9e560ede4ec340333b262735cfdbe8d8d36b55d78dac732",
-            "url": "https://github.com/cli/cli/releases/download/v2.44.1/gh_2.44.1_linux_arm64.tar.gz",
+            "sha256": "0b4d23c60872d3e43b94bbcf84ffd69719dc8f9d85d685deb0907774caea7b10",
+            "url": "https://github.com/cli/cli/releases/download/v2.46.0/gh_2.46.0_linux_arm64.tar.gz",
             "only-arches": [
                 "aarch64"
             ],
