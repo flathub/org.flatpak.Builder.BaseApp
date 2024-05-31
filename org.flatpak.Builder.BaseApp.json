@@ -380,6 +380,25 @@
                     "sha256": "a2f0056eed14ff791aee2b08b1514a0f1b6cf215f0579138a8cae8c45a0d3b0f"
                 }
             ]
+        },
+        {
+            "name": "webp-pixbuf-loader",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dgdk_pixbuf_moduledir=/app/lib/gdk-pixbuf-2.0/2.10.0/loaders/"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/aruiz/webp-pixbuf-loader.git",
+                    "commit": "52232e4ba282b2fed68e8fcb4b5d45ed0eaa4ed3",
+                    "tag": "0.2.7"
+                }
+            ],
+            "post-install": [
+                "GDK_PIXBUF_MODULEDIR=/app/lib/gdk-pixbuf-2.0/2.10.0/loaders/ gdk-pixbuf-query-loaders > /app/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache",
+                "gdk-pixbuf-query-loaders >> /app/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache"
+            ]
         }
     ]
 }
