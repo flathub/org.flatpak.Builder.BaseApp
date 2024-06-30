@@ -32,6 +32,7 @@ jobs:
     - name: Build org.flatpak.Builder.BaseApp
       run: |
         jq '."base-version" = "localtest"' org.flatpak.Builder.BaseApp.json >> org.flatpak.Builder.BaseApp-modified.json
+        git submodule update --init --recursive
         flatpak-builder --verbose --user --sandbox --force-clean --repo=repo \
           --install-deps-from=flathub --default-branch=localtest --ccache \
           --install builddir org.flatpak.Builder.BaseApp-modified.json
