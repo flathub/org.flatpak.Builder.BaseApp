@@ -125,34 +125,14 @@
                 "-DENABLE_TESTSUITE=OFF",
                 "-DWITH_AUDIT=OFF",
                 "-DENABLE_PYTHON=OFF",
-                "-DWITH_INTERNAL_OPENPGP=ON"
-            ],
-            "cleanup": [
-                "/bin/rpm*",
-                "/lib/rpm",
-                "/lib/librpm.so*",
-                "/lib/librpmbuild.so*",
-                "/lib/librpmsign.so*"
+                "-DWITH_INTERNAL_OPENPGP=ON",
+                "-DWITH_ARCHIVE=ON"
             ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://ftp.osuosl.org/pub/rpm/releases/rpm-4.19.x/rpm-4.19.1.1.tar.bz2",
                     "sha256": "874091b80efe66f9de8e3242ae2337162e2d7131e3aa4ac99ac22155e9c521e5"
-                }
-            ]
-        },
-        {
-            "name": "rpm2cpio",
-            "buildsystem": "simple",
-            "build-commands": [
-                "install -Dm755 rpm2cpio /app/bin/rpm2cpio"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://gitlab.archlinux.org/archlinux/packaging/packages/rpmextract/-/raw/9763231c8ae0539c6d7fe8ad31967b2175089743/rpm2cpio",
-                    "sha256": "5b9133774a969e9b2c4b18c77b340ed1e591e13ba1336fd4a4c15a96ad436dee"
                 }
             ]
         },
