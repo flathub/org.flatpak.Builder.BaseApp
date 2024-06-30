@@ -17,6 +17,28 @@
             "V": "1"
         }
     },
+    "cleanup": [
+        "*.a",
+        "*.la",
+        "/build-1",
+        "/etc",
+        "/lib/cmake",
+        "/libexec/installed-tests",
+        "/libexec/libostree",
+        "/man",
+        "/share/aclocal",
+        "/share/bash-completion",
+        "/share/dbus-1",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/installed-tests",
+        "/share/lua",
+        "/share/man",
+        "/share/ostree",
+        "/share/pkgconfig",
+        "/share/thumbnailers",
+        "/var"
+    ],
     "modules": [
         "xvfb.json",
         "jq.json",
@@ -25,9 +47,15 @@
             "name": "dbus",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://gitlab.freedesktop.org/dbus/dbus.git",
-                    "commit": "fa05c11a0047f2927e76d08f9fcf6638ded7ff50"
+                    "type": "archive",
+                    "url": "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz",
+                    "sha256": "ba1f21d2bd9d339da2d4aa8780c09df32fea87998b73da24f49ab9df1e36a50f",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 5356,
+                        "stable-only": true,
+                        "url-template": "https://dbus.freedesktop.org/releases/dbus/dbus-$version.tar.xz"
+                    }
                 }
             ]
         },
@@ -35,9 +63,14 @@
             "name": "libyaml",
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/yaml/libyaml/releases/download/0.2.5/yaml-0.2.5.tar.gz",
-                    "sha256": "c642ae9b75fee120b2d96c712538bd2cf283228d2337df2cf2988e3c02678ef4"
+                    "type": "git",
+                    "url": "https://github.com/yaml/libyaml.git",
+                    "tag": "0.2.5",
+                    "commit": "2c891fc7a770e8ba2fec34fc6b545c672beb37e6",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    }
                 }
             ]
         },
@@ -45,17 +78,22 @@
             "name": "stemmer",
             "buildsystem": "simple",
             "build-commands": [
-                "make libstemmer.so -j$FLATPAK_BUILDER_N_JOBS",
+                "make libstemmer.so.0 -j$FLATPAK_BUILDER_N_JOBS",
                 "install -Dm644 include/libstemmer.h /app/include/libstemmer.h",
-                "install -Dm644 libstemmer.so.0.0.0 /app/lib/libstemmer.so.0.0.0",
+                "install -Dm644 libstemmer.so.0 /app/lib/libstemmer.so.0.0.0",
                 "ln -s libstemmer.so.0.0.0 /app/lib/libstemmer.so.0",
                 "ln -s libstemmer.so.0 /app/lib/libstemmer.so"
             ],
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/snowballstem/snowball",
-                    "commit": "d29510ae32702a81cdc29177a133e894df854550"
+                    "url": "https://github.com/snowballstem/snowball.git",
+                    "tag": "v2.2.0",
+                    "commit": "48a67a2831005f49c48ec29a5837640e23e54e6b",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
                 },
                 {
                     "type": "patch",
@@ -68,16 +106,26 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.rpm.org/popt/releases/popt-1.x/popt-1.18.tar.gz",
-                    "sha256": "5159bc03a20b28ce363aa96765f37df99ea4d8850b1ece17d1e6ad5c24fdc5d1"
+                    "url": "https://ftp.osuosl.org/pub/rpm/popt/releases/popt-1.x/popt-1.19.tar.gz",
+                    "sha256": "c25a4838fc8e4c1c8aacb8bd620edb3084a3d63bf8987fdad3ca2758c63240f9",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 3689,
+                        "stable-only": true,
+                        "url-template": "https://ftp.osuosl.org/pub/rpm/popt/releases/popt-1.x/popt-$version.tar.gz"
+                    }
                 }
             ]
         },
+        "shared-modules/lua5.4/lua-5.4.json",
         {
             "name": "rpm",
+            "buildsystem": "cmake",
             "config-opts": [
-                "--disable-bdb",
-                "--without-lua"
+                "-DENABLE_TESTSUITE=OFF",
+                "-DWITH_AUDIT=OFF",
+                "-DENABLE_PYTHON=OFF",
+                "-DWITH_INTERNAL_OPENPGP=ON"
             ],
             "cleanup": [
                 "/bin/rpm*",
@@ -89,8 +137,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.rpm.org/releases/rpm-4.16.x/rpm-4.16.1.3.tar.bz2",
-                    "sha256": "513dc7f972b6e7ccfc9fc7f9c01d5310cc56ee853892e4314fa2cad71478e21d"
+                    "url": "https://ftp.osuosl.org/pub/rpm/releases/rpm-4.19.x/rpm-4.19.1.1.tar.bz2",
+                    "sha256": "874091b80efe66f9de8e3242ae2337162e2d7131e3aa4ac99ac22155e9c521e5"
                 }
             ]
         },
@@ -103,7 +151,7 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://gitlab.archlinux.org/archlinux/packaging/packages/rpmextract/-/raw/main/rpm2cpio",
+                    "url": "https://gitlab.archlinux.org/archlinux/packaging/packages/rpmextract/-/raw/9763231c8ae0539c6d7fe8ad31967b2175089743/rpm2cpio",
                     "sha256": "5b9133774a969e9b2c4b18c77b340ed1e591e13ba1336fd4a4c15a96ad436dee"
                 }
             ]
@@ -148,16 +196,38 @@
                 },
                 {
                     "name": "utf8proc",
+                    "buildsystem": "cmake-ninja",
+                    "config-opts": [
+                        "-DBUILD_SHARED_LIBS=ON",
+                        "-DUTF8PROC_INSTALL=ON",
+                        "-DUTF8PROC_ENABLE_TESTING=OFF"
+                    ],
+                    "builddir": true,
+                    "sources": [
+                        {
+                            "type": "git",
+                            "url": "https://github.com/JuliaStrings/utf8proc.git",
+                            "tag": "v2.9.0",
+                            "commit": "34db3f7954e9298e89f42641ac78e0450f80a70d",
+                            "x-checker-data": {
+                                "type": "git",
+                                "tag-pattern": "^v([\\d.]+)$"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "scons",
                     "buildsystem": "simple",
+                    "cleanup": ["*"],
                     "build-commands": [
-                        "make prefix=/app",
-                        "make prefix=/app install"
+                        "pip3 install --no-index --no-build-isolation --prefix=/app ."
                     ],
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/JuliaStrings/utf8proc/archive/v2.4.0.tar.gz",
-                            "sha256": "b2e5d547c1d94762a6d03a7e05cea46092aab68636460ff8648f1295e2cdfbd7"
+                            "url": "https://downloads.sourceforge.net/project/scons/scons/4.7.0/SCons-4.7.0.tar.gz",
+                            "sha256": "d9fcd831700ce373ecd30ac55e9d7eff20754215cff5967c4972237d614a326e"
                         }
                     ]
                 },
@@ -165,16 +235,10 @@
                     "name": "serf",
                     "buildsystem": "simple",
                     "build-commands": [
-                        "tar -xf scons-local-3.1.2.tar.gz",
-                        "python3 scons.py APR=/app/bin/apr-1-config APU=/app/bin/apu-1-config PREFIX=/app",
-                        "python3 scons.py install"
+                        "scons PREFIX=${FLATPAK_DEST} APR=/app/bin/apr-1-config APU=/app/bin/apu-1-config",
+                        "scons install prefix=${FLATPAK_DEST}"
                     ],
                     "sources": [
-                        {
-                            "type": "file",
-                            "url": "http://prdownloads.sourceforge.net/scons/scons-local-3.1.2.tar.gz",
-                            "sha256": "642e90860b746fa18fac08c7a22de6bfa86110ae7c56d7f136f7e5fb0d8f4f44"
-                        },
                         {
                             "type": "archive",
                             "url": "https://downloads.apache.org/serf/serf-1.3.10.tar.bz2",
@@ -204,6 +268,9 @@
                                 "pattern": "(subversion-([\\d.]+).tar.bz2)"
                             }
                         }
+                    ],
+                    "post-install": [
+                        "cp -v /app/share/pkgconfig/*.pc /app/lib/pkgconfig"
                     ]
                 }
             ]
@@ -217,16 +284,28 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/git-lfs/git-lfs/releases/download/v3.3.0/git-lfs-linux-amd64-v3.3.0.tar.gz",
-                    "sha256": "6a4e6bd7d06d5c024bc70c8ee8c9da143ffc37d2646e252a17a6126d30cdebc1",
+                    "url": "https://github.com/git-lfs/git-lfs/releases/download/v3.5.1/git-lfs-linux-amd64-v3.5.1.tar.gz",
+                    "sha256": "6f28eb19faa7a968882dca190d92adc82493378b933958d67ceaeb9ebe4d731e",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/git-lfs/git-lfs/releases/latest",
+                        "url-query": ".assets[] | select(.name==\"git-lfs-linux-amd64-\" + $version + \".tar.gz\") | .browser_download_url",
+                        "version-query": ".tag_name"
+                    },
                     "only-arches": [
                         "x86_64"
                     ]
                 },
                 {
                     "type": "archive",
-                    "url": "https://github.com/git-lfs/git-lfs/releases/download/v3.3.0/git-lfs-linux-arm64-v3.3.0.tar.gz",
-                    "sha256": "e97c477981a9b6a40026cadc1bf005541d973fc32df2de2f398643b15df6b5c6",
+                    "url": "https://github.com/git-lfs/git-lfs/releases/download/v3.5.1/git-lfs-linux-arm64-v3.5.1.tar.gz",
+                    "sha256": "4f8700aacaa0fd26ae5300fb0996aed14d1fd0ce1a63eb690629c132ff5163a9",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/git-lfs/git-lfs/releases/latest",
+                        "url-query": ".assets[] | select(.name==\"git-lfs-linux-arm64-\" + $version + \".tar.gz\") | .browser_download_url",
+                        "version-query": ".tag_name"
+                    },
                     "only-arches": [
                         "aarch64"
                     ]
@@ -239,15 +318,23 @@
             "make-args": [
                 "7z"
             ],
+            "make-install-args": [
+                "DEST_HOME=/app"
+            ],
             "cleanup": [
-                "/man",
                 "/share"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/p7zip-project/p7zip/archive/v17.04.tar.gz",
-                    "sha256": "ea029a2e21d2d6ad0a156f6679bd66836204aa78148a4c5e498fe682e77127ef"
+                    "url": "https://github.com/p7zip-project/p7zip/archive/refs/tags/v17.05.tar.gz",
+                    "sha256": "d2788f892571058c08d27095c22154579dfefb807ebe357d145ab2ddddefb1a6",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/p7zip-project/p7zip/releases/latest",
+                        "version-query": ".tag_name",
+                        "url-query": "\"https://github.com/p7zip-project/p7zip/archive/refs/tags/\\($version).tar.gz\""
+                    }
                 },
                 {
                     "type": "shell",
@@ -298,32 +385,16 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://files.pythonhosted.org/packages/py3/m/maturin/maturin-0.13.7-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl",
-                    "sha256": "a96f1b3ede71c0f76b8c7cfac18a9eec90174bdf434fa9aeff491be9a7ca5179"
+                    "url": "https://files.pythonhosted.org/packages/95/02/572c1f2aed8a94da5cbc6037b935130491542845167dac8fd34936dfff29/maturin-1.6.0-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl",
+                    "sha256": "d92b045e90ed919a8a2520dda64e3f384e5e746ea51e1498cc6ac3e9e5c76054"
                 },
                 {
                     "type": "file",
                     "only-arches": [
                         "aarch64"
                     ],
-                    "url": "https://files.pythonhosted.org/packages/py3/m/maturin/maturin-0.13.7-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.musllinux_1_1_aarch64.whl",
-                    "sha256": "0b6ac1219a809155057fd1f358f7ece03c3abd2e2991832ce5146825a9fa4160"
-                }
-            ],
-            "modules": [
-                {
-                    "name": "python3-tomli",
-                    "buildsystem": "simple",
-                    "build-commands": [
-                        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"tomli\" --no-build-isolation"
-                    ],
-                    "sources": [
-                        {
-                            "type": "file",
-                            "url": "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl",
-                            "sha256": "939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"
-                        }
-                    ]
+                    "url": "https://files.pythonhosted.org/packages/37/a8/83dc94a4b5959ced19354fcce404107221d1f7460c9e28f61ea61bfa8ac9/maturin-1.6.0-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.musllinux_1_1_aarch64.whl",
+                    "sha256": "d67ca8dc7f3b2314bd3bf83c4de52645e220ee312fd526e53acc6a735f233fad"
                 }
             ]
         },
@@ -335,12 +406,6 @@
                 "--with-systemdsystemgeneratordir=/app/lib/systemd/system-generators",
                 "--without-systemdsystemunitdir",
                 "--with-curl"
-            ],
-            "cleanup": [
-                "/etc/grub.d",
-                "/etc/ostree",
-                "/share/ostree",
-                "/libexec"
             ],
             "sources": [
                 {
@@ -360,13 +425,13 @@
             "name": "python3-pyparsing",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --prefix=/app pyparsing-2.4.7-py2.py3-none-any.whl"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyparsing\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl",
-                    "sha256": "ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"
+                    "url": "https://files.pythonhosted.org/packages/9d/ea/6d76df31432a0e6fdf81681a895f009a4bb47b3c39036db3e1b528191d52/pyparsing-3.1.2-py3-none-any.whl",
+                    "sha256": "f9db75911801ed778fe61bb643079ff86601aca99fcae6345aa67292038fb742"
                 }
             ]
         },
@@ -376,8 +441,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/hughsie/libxmlb/releases/download/0.3.14/libxmlb-0.3.14.tar.xz",
-                    "sha256": "a2f0056eed14ff791aee2b08b1514a0f1b6cf215f0579138a8cae8c45a0d3b0f"
+                    "url": "https://github.com/hughsie/libxmlb/releases/download/0.3.19/libxmlb-0.3.19.tar.xz",
+                    "sha256": "0a3ec258b12dbf10e5fe840b2421c84137eb7cc1b09c3de6210f3f7d51733733",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 179028,
+                        "stable-only": true,
+                        "url-template": "https://github.com/hughsie/libxmlb/releases/download/$version/libxmlb-$version.tar.xz"
+                    }
                 }
             ]
         },
@@ -392,7 +463,11 @@
                     "type": "git",
                     "url": "https://github.com/aruiz/webp-pixbuf-loader.git",
                     "commit": "52232e4ba282b2fed68e8fcb4b5d45ed0eaa4ed3",
-                    "tag": "0.2.7"
+                    "tag": "0.2.7",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    }
                 }
             ],
             "post-install": [
@@ -409,7 +484,13 @@
                 {
                     "type": "archive",
                     "url": "https://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-0.7.8/optipng-0.7.8.tar.gz",
-                    "sha256": "25a3bd68481f21502ccaa0f4c13f84dcf6b20338e4c4e8c51f2cefbd8513398c"
+                    "sha256": "25a3bd68481f21502ccaa0f4c13f84dcf6b20338e4c4e8c51f2cefbd8513398c",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 2571,
+                        "stable-only": true,
+                        "url-template": "https://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-$version/optipng-$version.tar.gz"
+                    }
                 }
             ]
         }
