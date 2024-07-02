@@ -40,7 +40,6 @@
         "/var"
     ],
     "modules": [
-        "xvfb.json",
         "jq.json",
         "gh.json",
         {
