@@ -134,6 +134,7 @@
                 }
             ]
         },
+        "xvfb.json",
         {
             "name": "libyaml",
             "sources": [
