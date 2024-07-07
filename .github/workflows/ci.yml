@@ -78,6 +78,11 @@ jobs:
       run: |
         flatpak run --command=svn org.flatpak.Builder//localtest info --depth empty --show-item revision https://svn.code.sf.net/p/freeimage/svn/
 
+    # Needed by flatpak-github-actions
+    - name: Check if xvfb-run works
+      run: |
+        flatpak run --command=xvfb-run org.flatpak.Builder//localtest -a flatpak-builder --version
+
     - name: Sanity check the linter
       run: |
         flatpak run --command=flatpak-builder-lint org.flatpak.Builder//localtest --exceptions manifest org.flatpak.Builder.BaseApp.json
