@@ -49,8 +49,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "3ea6ed8b2585f406a064cecd7e1501e58f56c8e7ca764ae1f3483d1b8ed68826",
-                    "url": "https://github.com/cli/cli/releases/download/v2.52.0/gh_2.52.0_linux_amd64.tar.gz",
+                    "sha256": "ed2caf962730e0f593a2b6cae42a9b827b8a9c8bdd6efb56eae7feec38bdd0c6",
+                    "url": "https://github.com/cli/cli/releases/download/v2.53.0/gh_2.53.0_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -63,8 +63,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "3699f5f6d85cef4e1272f233153f7504d348323883cabf69f8791cc1cfbe7931",
-                    "url": "https://github.com/cli/cli/releases/download/v2.52.0/gh_2.52.0_linux_arm64.tar.gz",
+                    "sha256": "22c4254025ef5acd7e5406a0eade879e868204861fcb3cd51a95a20cda5d221a",
+                    "url": "https://github.com/cli/cli/releases/download/v2.53.0/gh_2.53.0_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -275,7 +275,9 @@
                 {
                     "name": "scons",
                     "buildsystem": "simple",
-                    "cleanup": ["*"],
+                    "cleanup": [
+                        "*"
+                    ],
                     "build-commands": [
                         "pip3 install --no-index --no-build-isolation --prefix=/app ."
                     ],
@@ -466,8 +468,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ostreedev/ostree/releases/download/v2024.6/libostree-2024.6.tar.xz",
-                    "sha256": "8b61c856697aa412f2f1724322ada40bdd7b1bf9e7783e2c594faa7a594f868f",
+                    "url": "https://github.com/ostreedev/ostree/releases/download/v2024.7/libostree-2024.7.tar.xz",
+                    "sha256": "72451efffe5a10acb4cfdd6eb849db97fa9e61a81e4113fc656eece77eb93355",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/ostreedev/ostree/releases/latest",
