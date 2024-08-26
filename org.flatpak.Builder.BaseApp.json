@@ -49,8 +49,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "c4441b2acfb63feb5fc37a346b0a0a66080d657397f1eb81e3025961dcb06dd3",
-                    "url": "https://github.com/cli/cli/releases/download/v2.54.0/gh_2.54.0_linux_amd64.tar.gz",
+                    "sha256": "49700b3fedb5bfcbef696fe9f1f69091ceb9caf2d40bd872b5028c451efc52bc",
+                    "url": "https://github.com/cli/cli/releases/download/v2.55.0/gh_2.55.0_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -63,8 +63,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "a660e5ab768390fc1f328df9604930ac06ad5cd7b98e96761be667141fe19c7c",
-                    "url": "https://github.com/cli/cli/releases/download/v2.54.0/gh_2.54.0_linux_arm64.tar.gz",
+                    "sha256": "2d5d2b965e0122c41752e64873dc33c213b068c1e7a9c396cbd8f6895fb9685f",
+                    "url": "https://github.com/cli/cli/releases/download/v2.55.0/gh_2.55.0_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -220,8 +220,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://dlcdn.apache.org/apr/apr-1.7.4.tar.bz2",
-                            "sha256": "fc648de983f3a2a6c9e78dea1f180639bd2fad6c06d556d4367a701fe5c35577",
+                            "url": "https://dlcdn.apache.org/apr/apr-1.7.5.tar.bz2",
+                            "sha256": "cd0f5d52b9ab1704c72160c5ee3ed5d3d4ca2df4a7f8ab564e3cb352b67232f2",
                             "x-checker-data": {
                                 "type": "anitya",
                                 "project-id": 95,
