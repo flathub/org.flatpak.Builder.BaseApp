@@ -334,43 +334,6 @@
             ]
         },
         {
-            "name": "git-lfs",
-            "buildsystem": "simple",
-            "build-commands": [
-                "install -Dm755 git-lfs /app/bin/git-lfs"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/git-lfs/git-lfs/releases/download/v3.5.1/git-lfs-linux-amd64-v3.5.1.tar.gz",
-                    "sha256": "6f28eb19faa7a968882dca190d92adc82493378b933958d67ceaeb9ebe4d731e",
-                    "x-checker-data": {
-                        "type": "json",
-                        "url": "https://api.github.com/repos/git-lfs/git-lfs/releases/latest",
-                        "url-query": ".assets[] | select(.name==\"git-lfs-linux-amd64-\" + $version + \".tar.gz\") | .browser_download_url",
-                        "version-query": ".tag_name"
-                    },
-                    "only-arches": [
-                        "x86_64"
-                    ]
-                },
-                {
-                    "type": "archive",
-                    "url": "https://github.com/git-lfs/git-lfs/releases/download/v3.5.1/git-lfs-linux-arm64-v3.5.1.tar.gz",
-                    "sha256": "4f8700aacaa0fd26ae5300fb0996aed14d1fd0ce1a63eb690629c132ff5163a9",
-                    "x-checker-data": {
-                        "type": "json",
-                        "url": "https://api.github.com/repos/git-lfs/git-lfs/releases/latest",
-                        "url-query": ".assets[] | select(.name==\"git-lfs-linux-arm64-\" + $version + \".tar.gz\") | .browser_download_url",
-                        "version-query": ".tag_name"
-                    },
-                    "only-arches": [
-                        "aarch64"
-                    ]
-                }
-            ]
-        },
-        {
             "name": "p7zip",
             "no-autogen": true,
             "make-args": [
@@ -508,29 +471,6 @@
                         "url-template": "https://github.com/hughsie/libxmlb/releases/download/$version/libxmlb-$version.tar.xz"
                     }
                 }
-            ]
-        },
-        {
-            "name": "webp-pixbuf-loader",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Dgdk_pixbuf_moduledir=/app/lib/gdk-pixbuf-2.0/2.10.0/loaders/"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/aruiz/webp-pixbuf-loader.git",
-                    "commit": "52232e4ba282b2fed68e8fcb4b5d45ed0eaa4ed3",
-                    "tag": "0.2.7",
-                    "x-checker-data": {
-                        "type": "git",
-                        "tag-pattern": "^([\\d.]+)$"
-                    }
-                }
-            ],
-            "post-install": [
-                "GDK_PIXBUF_MODULEDIR=/app/lib/gdk-pixbuf-2.0/2.10.0/loaders/ gdk-pixbuf-query-loaders > /app/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache",
-                "gdk-pixbuf-query-loaders >> /app/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache"
             ]
         },
         {
