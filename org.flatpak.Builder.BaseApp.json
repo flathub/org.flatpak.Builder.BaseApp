@@ -1,16 +1,16 @@
 {
     "id": "org.flatpak.Builder.BaseApp",
-    "branch": "23.08",
+    "branch": "24.08",
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
-    "runtime-version": "23.08",
+    "runtime-version": "24.08",
     "separate-locales": false,
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable",
-        "org.freedesktop.Sdk.Extension.llvm16"
+        "org.freedesktop.Sdk.Extension.llvm18"
     ],
     "build-options": {
-        "append-path": "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm16/bin",
+        "append-path": "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm18/bin",
         "env": {
             "BASH_COMPLETIONSDIR": "/app/share/bash-completion/completions",
             "MOUNT_FUSE_PATH": "../tmp/",
