@@ -532,7 +532,7 @@
                 }
             ],
             "post-install": [
-                "mkdir -p ${FLATPAK_DEST}/bin && ln -s \"xml\" \"${FLATPAK_DEST}/bin/xmlstarlet\""
+                "mkdir -p ${FLATPAK_DEST}/bin && ln -s ${FLATPAK_DEST}/bin/xml ${FLATPAK_DEST}/bin/xmlstarlet"
             ]
         },
         {
