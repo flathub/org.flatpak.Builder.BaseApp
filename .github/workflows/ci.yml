@@ -24,6 +24,15 @@ jobs:
       run: |
         flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+    - name: Get runtime version of Baseapp
+      run: |
+        runtime_version="$(jq -r '."runtime-version"' org.flatpak.Builder.BaseApp.json)"
+        echo "BASEAPP_RUNTIME_VERSION=${runtime_version}" >> $GITHUB_ENV
+
+    - name: Install dependencies
+      run: |
+        flatpak install -y --user flathub org.freedesktop.{Platform,Sdk{,.Extension.{rust-stable,llvm16}}}//$BASEAPP_RUNTIME_VERSION
+
     # TODO: Remove this workaround once flatpak-builder v1.2.3 is available through the above PPA.
     - name: Allow file:// clones with git>=2.38.1
       run: |
@@ -31,10 +40,10 @@ jobs:
 
     - name: Build org.flatpak.Builder.BaseApp
       run: |
-        jq '."base-version" = "localtest"' org.flatpak.Builder.BaseApp.json >> org.flatpak.Builder.BaseApp-modified.json
+        jq '."branch" = "localtest"' org.flatpak.Builder.BaseApp.json >> org.flatpak.Builder.BaseApp-modified.json
         git submodule update --init --recursive
         flatpak-builder --verbose --user --sandbox --force-clean --repo=repo \
-          --install-deps-from=flathub --default-branch=localtest --ccache \
+          --default-branch=localtest --ccache \
           --install builddir org.flatpak.Builder.BaseApp-modified.json
 
     - name: Build org.flatpak.Builder
@@ -42,9 +51,10 @@ jobs:
         git clone --depth=1 --branch master --recursive --single-branch https://github.com/flathub/org.flatpak.Builder.git
         git submodule update --init --recursive
         cd org.flatpak.Builder
+        jq '."runtime-version" = $ENV.BASEAPP_RUNTIME_VERSION | ."base-version" = "localtest"' org.flatpak.Builder.json >> org.flatpak.Builder-modified.json
         flatpak-builder --verbose --user --sandbox --force-clean --repo=repo \
-          --install-deps-from=flathub --default-branch=localtest --ccache \
-          --install builddir org.flatpak.Builder.json
+          --default-branch=localtest --ccache \
+          --install builddir org.flatpak.Builder-modified.json
 
     - name: Check if org.flatpak.Builder launches
       run: |
