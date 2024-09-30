@@ -177,8 +177,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.osuosl.org/pub/rpm/releases/rpm-4.19.x/rpm-4.19.1.1.tar.bz2",
-                    "sha256": "874091b80efe66f9de8e3242ae2337162e2d7131e3aa4ac99ac22155e9c521e5"
+                    "url": "https://github.com/rpm-software-management/rpm/archive/refs/tags/rpm-4.19.1.1-release.tar.gz",
+                    "sha256": "1336d6b8d59cb00f9e524a1f2dc0c57ec162bb3f439b8d7c6d3e8b9c442e75c3",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 15204,
+                        "stable-only": true,
+                        "url-template": "https://github.com/rpm-software-management/rpm/archive/refs/tags/rpm-$version.tar.gz"
+                    }
                 }
             ]
         },
