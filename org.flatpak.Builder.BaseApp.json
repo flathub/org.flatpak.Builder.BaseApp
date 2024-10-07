@@ -177,8 +177,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/rpm-software-management/rpm/archive/refs/tags/rpm-4.19.1.1-release.tar.gz",
-                    "sha256": "1336d6b8d59cb00f9e524a1f2dc0c57ec162bb3f439b8d7c6d3e8b9c442e75c3",
+                    "url": "https://github.com/rpm-software-management/rpm/archive/refs/tags/rpm-4.20.0-release.tar.gz",
+                    "sha256": "8179ce97cf66a381ed221b9953d5684c9717bedae01e06f6e79d4b9ffce44b89",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 15204,
