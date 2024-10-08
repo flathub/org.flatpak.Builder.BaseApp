@@ -172,7 +172,8 @@
                 "-DENABLE_PYTHON=OFF",
                 "-DWITH_DBUS=OFF",
                 "-DWITH_INTERNAL_OPENPGP=ON",
-                "-DWITH_ARCHIVE=ON"
+                "-DWITH_ARCHIVE=ON",
+                "-DWITH_SEQUOIA=OFF"
             ],
             "sources": [
                 {
