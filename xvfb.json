@@ -12,8 +12,8 @@
     "sources": [
         {
             "type": "archive",
-            "url": "https://gitlab.freedesktop.org/xorg/xserver/-/archive/xorg-server-21.1.13/xserver-xorg-server-21.1.13.tar.bz2",
-            "sha256": "ee2bf6d65f4b111ce86ca817c3327dc1e70d9c958aa16876f2820caf7bf7cffa",
+            "url": "https://gitlab.freedesktop.org/xorg/xserver/-/archive/xorg-server-21.1.14/xserver-xorg-server-21.1.14.tar.bz2",
+            "sha256": "6833459a544cc062bdcb5b1bb8fb87de6fc505a5c52650756ec888f1cc51cf5c",
             "x-checker-data": {
                 "type": "anitya",
                 "project-id": 5250,
