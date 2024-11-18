@@ -120,6 +120,25 @@
         },
         "xvfb.json",
         {
+            "name": "dbus",
+            "config-opts": [
+                "--disable-static"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz",
+                    "sha256": "ba1f21d2bd9d339da2d4aa8780c09df32fea87998b73da24f49ab9df1e36a50f",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 5356,
+                        "stable-only": true,
+                        "url-template": "https://dbus.freedesktop.org/releases/dbus/dbus-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
             "name": "stemmer",
             "buildsystem": "simple",
             "build-commands": [
