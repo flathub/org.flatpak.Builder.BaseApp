@@ -49,8 +49,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "a3a8df5164693e81acf9000b63a2da1a8aca25e4d2c640c466bcedf22c83d5fb",
-                    "url": "https://github.com/cli/cli/releases/download/v2.63.0/gh_2.63.0_linux_amd64.tar.gz",
+                    "sha256": "912fdb1ca29cb005fb746fc5d2b787a289078923a29d0f9ec19a0b00272ded00",
+                    "url": "https://github.com/cli/cli/releases/download/v2.63.2/gh_2.63.2_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -63,8 +63,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "419dafe36a2de4ea39e264658203da7a0c47c145d80cee01ac827b06fa60e48c",
-                    "url": "https://github.com/cli/cli/releases/download/v2.63.0/gh_2.63.0_linux_arm64.tar.gz",
+                    "sha256": "0f31e2a8549c64b5c1679f0b99ce5e0dac7c91da9e86f6246adb8805b0f0b4bb",
+                    "url": "https://github.com/cli/cli/releases/download/v2.63.2/gh_2.63.2_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -314,8 +314,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://downloads.apache.org/subversion/subversion-1.14.4.tar.bz2",
-                            "sha256": "44ead116e72e480f10f123c914bb6f9f8c041711c041ed7abff1b8634a199e3c",
+                            "url": "https://downloads.apache.org/subversion/subversion-1.14.5.tar.bz2",
+                            "sha256": "e78a29e7766b8b7b354497d08f71a55641abc53675ce1875584781aae35644a1",
                             "x-checker-data": {
                                 "type": "html",
                                 "url": "https://downloads.apache.org/subversion/",
