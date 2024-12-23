@@ -49,8 +49,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "912fdb1ca29cb005fb746fc5d2b787a289078923a29d0f9ec19a0b00272ded00",
-                    "url": "https://github.com/cli/cli/releases/download/v2.63.2/gh_2.63.2_linux_amd64.tar.gz",
+                    "sha256": "0e44a4c43014bd513550ec190b7c33f5f8b63d162927a1f6445ef38ea25cd2fa",
+                    "url": "https://github.com/cli/cli/releases/download/v2.64.0/gh_2.64.0_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -63,8 +63,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "0f31e2a8549c64b5c1679f0b99ce5e0dac7c91da9e86f6246adb8805b0f0b4bb",
-                    "url": "https://github.com/cli/cli/releases/download/v2.63.2/gh_2.63.2_linux_arm64.tar.gz",
+                    "sha256": "002cbf4d1cf349c5a6bd68c7d1fec88c821be19e13c9d0cd08b1b596b5a069aa",
+                    "url": "https://github.com/cli/cli/releases/download/v2.64.0/gh_2.64.0_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -127,8 +127,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz",
-                    "sha256": "ba1f21d2bd9d339da2d4aa8780c09df32fea87998b73da24f49ab9df1e36a50f",
+                    "url": "https://dbus.freedesktop.org/releases/dbus/dbus-1.16.0.tar.xz",
+                    "sha256": "9f8ca5eb51cbe09951aec8624b86c292990ae2428b41b856e2bed17ec65c8849",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 5356,
@@ -427,8 +427,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ostreedev/ostree/releases/download/v2024.9/libostree-2024.9.tar.xz",
-                    "sha256": "4356170ec5f7a09428b6add77e2c6f31d4049ab765ee67cf929bfa3b750d3e1b",
+                    "url": "https://github.com/ostreedev/ostree/releases/download/v2024.10/libostree-2024.10.tar.xz",
+                    "sha256": "54e3387dee1ff16031a0679aca2b60da90ab7f4a26c211822333c7f23000abee",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/ostreedev/ostree/releases/latest",
