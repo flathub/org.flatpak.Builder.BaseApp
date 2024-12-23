@@ -121,8 +121,19 @@
         "xvfb.json",
         {
             "name": "dbus",
+            "buildsystem": "meson",
             "config-opts": [
-                "--disable-static"
+                "-Dlibaudit=disabled",
+                "-Dducktype_docs=disabled",
+                "-Dqt_help=disabled",
+                "-Dmodular_tests=disabled",
+                "-Drelocation=disabled",
+                "-Dselinux=disabled",
+                "-Dkqueue=disabled",
+                "-Dlaunchd=disabled",
+                "-Dx11_autolaunch=disabled",
+                "-Dsystemd_system_unitdir=''",
+                "-Dsystemd_user_unitdir=''"
             ],
             "sources": [
                 {
