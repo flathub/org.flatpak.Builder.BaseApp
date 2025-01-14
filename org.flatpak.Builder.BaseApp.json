@@ -402,28 +402,49 @@
             ]
         },
         {
-            "name": "maturin",
+            "name": "python3-setuptools_rust",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST} maturin --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"setuptools_rust\" --no-build-isolation"
+            ],
+            "cleanup": [
+                "*"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "only-arches": [
-                        "x86_64"
-                    ],
-                    "url": "https://files.pythonhosted.org/packages/95/02/572c1f2aed8a94da5cbc6037b935130491542845167dac8fd34936dfff29/maturin-1.6.0-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl",
-                    "sha256": "d92b045e90ed919a8a2520dda64e3f384e5e746ea51e1498cc6ac3e9e5c76054"
+                    "url": "https://files.pythonhosted.org/packages/6a/23/8146aad7d88f4fcb3a6218f41a60f6c2d4e3a72de72da1825dc7c8f7877c/semantic_version-2.10.0-py2.py3-none-any.whl",
+                    "sha256": "de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177"
                 },
                 {
                     "type": "file",
-                    "only-arches": [
-                        "aarch64"
-                    ],
-                    "url": "https://files.pythonhosted.org/packages/37/a8/83dc94a4b5959ced19354fcce404107221d1f7460c9e28f61ea61bfa8ac9/maturin-1.6.0-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.musllinux_1_1_aarch64.whl",
-                    "sha256": "d67ca8dc7f3b2314bd3bf83c4de52645e220ee312fd526e53acc6a735f233fad"
+                    "url": "https://files.pythonhosted.org/packages/97/09/3da290ba3934c7003d3a178840579989a7fcfa5bd23f50dd7f2ff27f30e1/setuptools_rust-1.10.2-py3-none-any.whl",
+                    "sha256": "4b39c435ae9670315d522ed08fa0e8cb29f2a6048033966b6be2571a90ce4f1c"
                 }
+            ]
+        },
+        {
+            "name": "python3-maturin",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"maturin\" --no-build-isolation"
+            ],
+            "build-options": {
+                "append-path": "/usr/lib/sdk/rust-stable/bin",
+                "env": {
+                    "CARGO_HOME": "/run/build/python3-maturin/cargo"
+                }
+            },
+            "cleanup": [
+                "*"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/51/28/31a650d9209d873b6aec759c944bd284155154d7a01f7f541786d7c435ca/maturin-1.7.4.tar.gz",
+                    "sha256": "2b349d742a07527d236f0b4b6cab26f53ebecad0ceabfc09ec4c6a396e3176f9"
+                },
+                "cargo-sources-maturin.json"
             ]
         },
         "flat-manager-client-deps.json",
@@ -547,6 +568,27 @@
                         "url-template": "https://github.com/flatpak/xdg-dbus-proxy/archive/refs/tags/v$version.tar.gz"
                     }
                 }
+            ]
+        },
+        {
+            "name": "python3-rpds-py",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"rpds-py\" --no-build-isolation"
+            ],
+            "build-options": {
+                "append-path": "/usr/lib/sdk/rust-stable/bin",
+                "env": {
+                    "CARGO_HOME": "/run/build/python3-rpds-py/cargo"
+                }
+            },
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/01/80/cce854d0921ff2f0a9fa831ba3ad3c65cee3a46711addf39a2af52df2cfd/rpds_py-0.22.3.tar.gz",
+                    "sha256": "e32fee8ab45d3c2db6da19a5323bc3362237c8b653c70194414b892fd06a080d"
+                },
+                "cargo-sources-rpds-py.json"
             ]
         }
     ]
