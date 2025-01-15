@@ -23,6 +23,7 @@
         "/build-1",
         "/etc",
         "/lib/cmake",
+        "/lib/systemd",
         "/libexec/installed-tests",
         "/libexec/libostree",
         "/man",
@@ -132,8 +133,8 @@
                 "-Dkqueue=disabled",
                 "-Dlaunchd=disabled",
                 "-Dx11_autolaunch=disabled",
-                "-Dsystemd_system_unitdir=''",
-                "-Dsystemd_user_unitdir=''"
+                "-Dsystemd_system_unitdir=/app/lib/systemd/system",
+                "-Dsystemd_user_unitdir=/app/lib/systemd/user"
             ],
             "sources": [
                 {
