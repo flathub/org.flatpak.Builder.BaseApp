@@ -566,7 +566,7 @@
                         "type": "anitya",
                         "project-id": 58434,
                         "stable-only": true,
-                        "url-template": "https://github.com/flatpak/xdg-dbus-proxy/archive/refs/tags/v$version.tar.gz"
+                        "url-template": "https://github.com/flatpak/xdg-dbus-proxy/archive/refs/tags/$version.tar.gz"
                     }
                 }
             ]
