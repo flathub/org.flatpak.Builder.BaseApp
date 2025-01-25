@@ -11,17 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        submodules: 'true'
 
     - uses: actions/cache@v4
       with:
         path: .flatpak-builder
         key: ${{ runner.os }}-flatpak-builder
 
-    - name: Install latest flatpak and flatpak-builder
+    - name: Install flatpak and flatpak-builder
       run: |
-        sudo add-apt-repository ppa:flatpak/stable
         sudo apt-get update
-        sudo apt-get install -y flatpak flatpak-builder jq
+        sudo apt-get install -y --no-install-recommends flatpak \
+            elfutils flatpak-builder dbus-daemon jq
 
     - name: Set up flathub remote
       run: |
@@ -36,7 +38,6 @@ jobs:
       run: |
         flatpak install -y --user flathub org.freedesktop.{Platform,Sdk{,.Extension.{rust-stable,llvm18}}}//$BASEAPP_RUNTIME_VERSION
 
-    # TODO: Remove this workaround once flatpak-builder v1.2.3 is available through the above PPA.
     - name: Allow file:// clones with git>=2.38.1
       run: |
         git config --global protocol.file.allow always
@@ -44,7 +45,6 @@ jobs:
     - name: Build org.flatpak.Builder.BaseApp
       run: |
         jq '."branch" = "localtest"' org.flatpak.Builder.BaseApp.json >> org.flatpak.Builder.BaseApp-modified.json
-        git submodule update --init --recursive
         flatpak-builder --verbose --user --sandbox --force-clean --repo=repo \
           --default-branch=localtest --ccache \
           --install builddir org.flatpak.Builder.BaseApp-modified.json
@@ -52,7 +52,6 @@ jobs:
     - name: Build org.flatpak.Builder
       run: |
         git clone --depth=1 --branch master --recursive --single-branch https://github.com/flathub/org.flatpak.Builder.git
-        git submodule update --init --recursive
         cd org.flatpak.Builder
         jq '."runtime-version" = $ENV.BASEAPP_RUNTIME_VERSION | ."base-version" = "localtest"' org.flatpak.Builder.json >> org.flatpak.Builder-modified.json
         flatpak-builder --verbose --user --sandbox --force-clean --repo=repo \
@@ -125,8 +124,7 @@ jobs:
 
     - name: Build org.freedesktop.appstream.cli with org.flatpak.Builder
       run: |
-        git clone --depth=1 --branch master --single-branch https://github.com/flathub/org.freedesktop.appstream.cli.git
-        git submodule update --init --recursive
+        git clone --depth=1 --branch master --single-branch --recursive https://github.com/flathub/org.freedesktop.appstream.cli.git
         cd org.freedesktop.appstream.cli
         dbus-run-session flatpak run org.flatpak.Builder//localtest --verbose --user --sandbox \
           --force-clean --install-deps-from=flathub --default-branch=localtest \
@@ -136,7 +134,6 @@ jobs:
     - name: Build io.neovim.nvim with org.flatpak.Builder
       run: |
         git clone --depth=1 --branch master --recursive --single-branch https://github.com/flathub/io.neovim.nvim.git
-        git submodule update --init --recursive
         cd io.neovim.nvim
         dbus-run-session flatpak run org.flatpak.Builder//localtest --verbose --user --sandbox \
           --force-clean --install-deps-from=flathub --default-branch=localtest \
