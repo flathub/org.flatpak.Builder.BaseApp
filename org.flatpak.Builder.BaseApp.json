@@ -29,7 +29,6 @@
         "/man",
         "/share/aclocal",
         "/share/bash-completion",
-        "/share/dbus-1",
         "/share/doc",
         "/share/gtk-doc",
         "/share/installed-tests",
