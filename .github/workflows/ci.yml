@@ -15,11 +15,6 @@ jobs:
       with:
         submodules: 'true'
 
-    - uses: actions/cache@v4
-      with:
-        path: .flatpak-builder
-        key: ${{ runner.os }}-flatpak-builder
-
     - name: Install flatpak and flatpak-builder
       run: |
         sudo add-apt-repository ppa:flatpak/stable
@@ -44,9 +39,19 @@ jobs:
       run: |
         git config --global protocol.file.allow always
 
-    - name: Build org.flatpak.Builder.BaseApp
+    - name: Prepare for hashing
       run: |
         jq '."branch" = "localtest"' org.flatpak.Builder.BaseApp.json >> org.flatpak.Builder.BaseApp-modified.json
+        flatpak-builder --show-manifest org.flatpak.Builder.BaseApp-modified.json >> org.flatpak.Builder.BaseApp-cache.json
+
+    - uses: actions/cache@v4
+      with:
+        path: .flatpak-builder
+        key: ${{ runner.os }}-flatpak-builder-${{ hashFiles('org.flatpak.Builder.BaseApp-cache.json') }}
+        restore-keys: ${{ runner.os }}-flatpak-builder-
+
+    - name: Build org.flatpak.Builder.BaseApp
+      run: |
         flatpak-builder --verbose --user --sandbox --force-clean --repo=repo \
           --default-branch=localtest --ccache \
           --install --keep-build-dirs builddir \
