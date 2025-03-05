@@ -631,6 +631,7 @@
                 },
                 "cargo-sources-rpds-py.json"
             ]
-        }
+        },
+        "flatpak-builder-tools-deps.json"
     ]
 }
