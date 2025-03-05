@@ -236,7 +236,7 @@
         "shared-modules/lua5.4/lua-5.4.json",
         {
             "name": "rpm",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DENABLE_TESTSUITE=OFF",
                 "-DWITH_AUDIT=OFF",
