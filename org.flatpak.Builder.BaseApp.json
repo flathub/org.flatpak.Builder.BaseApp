@@ -49,8 +49,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "d77623479bec017ef8eebadfefc785bafd4658343b3eb6d3f3e26fd5e11368d5",
-                    "url": "https://github.com/cli/cli/releases/download/v2.67.0/gh_2.67.0_linux_amd64.tar.gz",
+                    "sha256": "b4f533bf21d1fc0750976b4755e479ae3f59bfc42c9c22dfb0c0c5491ab1e152",
+                    "url": "https://github.com/cli/cli/releases/download/v2.68.1/gh_2.68.1_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -63,8 +63,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "d286ed158b629cefe4732b4b6865a7e0f763164477e42b91ea4494c1bb241ae0",
-                    "url": "https://github.com/cli/cli/releases/download/v2.67.0/gh_2.67.0_linux_arm64.tar.gz",
+                    "sha256": "018461fc2d55e88ff4e65d34251a8e3742629f44564a9734512276c080316f8f",
+                    "url": "https://github.com/cli/cli/releases/download/v2.68.1/gh_2.68.1_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -88,8 +88,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.39.0/just-1.39.0-x86_64-unknown-linux-musl.tar.gz",
-                    "sha256": "1c53fa85a8c021ce7b19814e1a5e1dc0aa10c04bddca75196f7ab6db6130d2cd",
+                    "url": "https://github.com/casey/just/releases/download/1.40.0/just-1.40.0-x86_64-unknown-linux-musl.tar.gz",
+                    "sha256": "181b91d0ceebe8a57723fb648ed2ce1a44d849438ce2e658339df4f8db5f1263",
                     "only_arches": [
                         "x86_64"
                     ],
@@ -104,8 +104,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.39.0/just-1.39.0-aarch64-unknown-linux-musl.tar.gz",
-                    "sha256": "f1b9acdb4374983539c765d60374350932527df807b25975e05abb152c9021e7",
+                    "url": "https://github.com/casey/just/releases/download/1.40.0/just-1.40.0-aarch64-unknown-linux-musl.tar.gz",
+                    "sha256": "d065d0df1a1f99529869fba8a5b3e0a25c1795b9007099b00dfabe29c7c1f7b6",
                     "only_arches": [
                         "aarch64"
                     ],
