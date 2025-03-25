@@ -631,6 +631,27 @@
                 "cargo-sources-rpds-py.json"
             ]
         },
-        "flatpak-builder-tools-deps.json"
+        "flatpak-builder-tools-deps.json",
+        {
+            "name": "python3-uv",
+            "buildsystem": "simple",
+            "build-options": {
+                "append-path": "/usr/lib/sdk/rust-stable/bin",
+                "env": {
+                    "CARGO_HOME": "/run/build/python3-uv/cargo"
+                }
+            },
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"uv==0.6.9\" --no-build-isolation"
+            ],
+            "sources": [
+                "cargo-sources-uv.json",
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/9f/c1/a60065b94012132ddc4259b1c66f074acdd369b920398e31e12a3d536672/uv-0.6.9.tar.gz",
+                    "sha256": "ab6b55d14450175e79a8a819fc2728bfb6adf289ce03ab312654091fa7f6101a"
+                }
+            ]
+        }
     ]
 }
