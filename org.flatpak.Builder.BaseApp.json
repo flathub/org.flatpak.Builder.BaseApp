@@ -49,8 +49,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "b4f533bf21d1fc0750976b4755e479ae3f59bfc42c9c22dfb0c0c5491ab1e152",
-                    "url": "https://github.com/cli/cli/releases/download/v2.68.1/gh_2.68.1_linux_amd64.tar.gz",
+                    "sha256": "6e3079e1220920eb61b9e8b68093f6e84b6fb0676ac7da3716689421134c7cff",
+                    "url": "https://github.com/cli/cli/releases/download/v2.69.0/gh_2.69.0_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -63,8 +63,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "018461fc2d55e88ff4e65d34251a8e3742629f44564a9734512276c080316f8f",
-                    "url": "https://github.com/cli/cli/releases/download/v2.68.1/gh_2.68.1_linux_arm64.tar.gz",
+                    "sha256": "b910b612ad001c2bce19f1cfab6c97af5afb9038abb815bbc667920901281216",
+                    "url": "https://github.com/cli/cli/releases/download/v2.69.0/gh_2.69.0_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -499,8 +499,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ostreedev/ostree/releases/download/v2025.1/libostree-2025.1.tar.xz",
-                    "sha256": "f2c312344fd69ae42869f9817e7eb460b8daec81256a0d48afdc4e0ec2f18351",
+                    "url": "https://github.com/ostreedev/ostree/releases/download/v2025.2/libostree-2025.2.tar.xz",
+                    "sha256": "f244a408c909998a778e127fcc22c1b502b4d013f15f26948f47cc72ffe2eef4",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/ostreedev/ostree/releases/latest",
