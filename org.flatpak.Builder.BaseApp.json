@@ -160,6 +160,7 @@
             ]
         },
         "xvfb.json",
+        "xwfb.json",
         {
             "name": "dbus",
             "buildsystem": "meson",

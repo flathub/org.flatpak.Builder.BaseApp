@@ -1,0 +1,171 @@
+{
+    "name": "xwfb",
+    "buildsystem": "meson",
+    "sources": [
+        {
+            "type": "archive",
+            "url": "https://gitlab.freedesktop.org/ofourdan/xwayland-run/-/archive/0.0.4/xwayland-run-0.0.4.tar.gz",
+            "sha256": "409eaf44938b120e8abe4e7c4a384d71d6ee1c72239f36e585fa0a2815d0fd8f",
+            "x-checker-data": {
+                "type": "anitya",
+                "project-id": 370600,
+                "stable-only": true,
+                "url-template": "https://gitlab.freedesktop.org/ofourdan/xwayland-run/-/archive/$version/xwayland-run-$version.tar.gz"
+            }
+        }
+    ],
+    "modules": [
+        {
+            "name": "mtdev",
+            "config-opts": [
+                "--disable-static"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://bitmath.org/code/mtdev/mtdev-1.1.7.tar.bz2",
+                    "sha256": "a107adad2101fecac54ac7f9f0e0a0dd155d954193da55c2340c97f2ff1d814e",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 8868,
+                        "stable-only": true,
+                        "url-template": "https://bitmath.org/code/mtdev/mtdev-$version.tar.bz2"
+                    }
+                },
+                {
+                    "type": "shell",
+                    "commands": [
+                       " cp -p /usr/share/automake-*/config.{sub,guess} config-aux/"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "libevdev",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dtests=disabled",
+                "-Ddocumentation=disabled"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.freedesktop.org/software/libevdev/libevdev-1.13.4.tar.xz",
+                    "sha256": "f00ab8d42ad8b905296fab67e13b871f1a424839331516642100f82ad88127cd",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 20540,
+                        "stable-only": true,
+                        "url-template": "https://www.freedesktop.org/software/libevdev/libevdev-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "libseat",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dexamples=disabled",
+                "-Dman-pages=disabled"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://git.sr.ht/~kennylevinsen/seatd/archive/0.9.1.tar.gz",
+                    "sha256": "819979c922a0be258aed133d93920bce6a3d3565a60588d6d372ce9db2712cd3",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 234932,
+                        "stable-only": true,
+                        "url-template": "https://git.sr.ht/~kennylevinsen/seatd/archive/$version.tar.gz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "libinput",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dlibwacom=false",
+                "-Ddebug-gui=false",
+                "-Dtests=false"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.28.1/libinput-1.28.1.tar.gz",
+                    "sha256": "a13f8c9a7d93df3c85c66afd135f0296701d8d32f911991b7aa4273fdd6a42a3",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 5781,
+                        "stable-only": true,
+                        "url-template": "https://gitlab.freedesktop.org/libinput/libinput/-/archive/$version/libinput-$version.tar.gz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hwdata",
+            "config-opts": [
+                "--datarootdir=/app/share"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/vcrhonek/hwdata.git",
+                    "tag": "v0.396",
+                    "commit": "736513dfc1d44c5fb48bead62af7e91c4e1d1dd2",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/vcrhonek/hwdata/releases/latest",
+                        "tag-query": ".tag_name"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "libdisplay-info",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gitlab.freedesktop.org/emersion/libdisplay-info/-/archive/0.2.0/libdisplay-info-0.2.0.tar.gz",
+                    "sha256": "f7331fcaf5527251b84c8fb84238d06cd2f458422ce950c80e86c72927aa8c2b",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 326668,
+                        "stable-only": true,
+                        "url-template": "https://gitlab.freedesktop.org/emersion/libdisplay-info/-/archive/$version/libdisplay-info-$version.tar.gz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "weston",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dbackend-rdp=false",
+                "-Dscreenshare=false",
+                "-Dbackend-vnc=false",
+                "-Dremoting=false",
+                "-Dpipewire=false",
+                "-Ddemo-clients=false",
+                "-Dtests=false",
+                "-Dtest-junit-xml=false"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://gitlab.freedesktop.org/wayland/weston/-/archive/14.0.2/weston-14.0.2.tar.gz",
+                    "sha256": "633f4e0f232ad150300c95ffcbc646fedf1349487bf389dbd2045fa69013d6e2",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 13745,
+                        "stable-only": true,
+                        "url-template": "https://gitlab.freedesktop.org/wayland/weston/-/archive/$version/weston-$version.tar.gz"
+                    }
+                }
+            ]
+        }
+    ]
+}
