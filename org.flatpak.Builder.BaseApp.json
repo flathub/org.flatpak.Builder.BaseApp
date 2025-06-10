@@ -636,14 +636,14 @@
                 }
             },
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"uv==0.6.9\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"uv==0.7.5\" --no-build-isolation"
             ],
             "sources": [
                 "cargo-sources-uv.json",
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9f/c1/a60065b94012132ddc4259b1c66f074acdd369b920398e31e12a3d536672/uv-0.6.9.tar.gz",
-                    "sha256": "ab6b55d14450175e79a8a819fc2728bfb6adf289ce03ab312654091fa7f6101a"
+                    "url": "https://files.pythonhosted.org/packages/33/b1/e4fcbff616269307743f8c13d1d9a35cb6ef8f39af9f0fbc87f4206b8cc5/uv-0.7.5.tar.gz",
+                    "sha256": "ae2192283eb645ccab189b1dfd8b13d3264eae631469a903c0e0f2dffce65e3b"
                 }
             ]
         }
