@@ -88,8 +88,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.40.0/just-1.40.0-x86_64-unknown-linux-musl.tar.gz",
-                    "sha256": "181b91d0ceebe8a57723fb648ed2ce1a44d849438ce2e658339df4f8db5f1263",
+                    "url": "https://github.com/casey/just/releases/download/1.41.0/just-1.41.0-x86_64-unknown-linux-musl.tar.gz",
+                    "sha256": "9d794c80727b28f549e9237ec0c01870794a36afeadea0864b5c2dbb32dd1fdb",
                     "only_arches": [
                         "x86_64"
                     ],
@@ -104,8 +104,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.40.0/just-1.40.0-aarch64-unknown-linux-musl.tar.gz",
-                    "sha256": "d065d0df1a1f99529869fba8a5b3e0a25c1795b9007099b00dfabe29c7c1f7b6",
+                    "url": "https://github.com/casey/just/releases/download/1.41.0/just-1.41.0-aarch64-unknown-linux-musl.tar.gz",
+                    "sha256": "26afe17813840a26ffac6bdad1e9689d44359dbc30101c3c80c965c6550e6be6",
                     "only_arches": [
                         "aarch64"
                     ],
@@ -123,8 +123,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/stedolan/jq/releases/download/jq-1.8.0/jq-1.8.0.tar.gz",
-                    "sha256": "91811577f91d9a6195ff50c2bffec9b72c8429dc05ec3ea022fd95c06d2b319c",
+                    "url": "https://github.com/stedolan/jq/releases/download/jq-1.8.1/jq-1.8.1.tar.gz",
+                    "sha256": "2be64e7129cecb11d5906290eba10af694fb9e3e7f9fc208a311dc33ca837eb0",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 13252,
