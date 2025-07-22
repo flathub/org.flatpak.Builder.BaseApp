@@ -501,7 +501,7 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/ostreedev/ostree/releases/download/v2025.3/libostree-2025.3.tar.xz",
-                    "sha256": "20c07c2d103d17d277b27c4632966ed02b9b69498d9bf186d4480e5b1c6e7e93",
+                    "sha256": "bbda48e59c85fe8af6482d161e4ddf3509bd808286b0ee5cd3e6489e16a3694d",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/ostreedev/ostree/releases/latest",
