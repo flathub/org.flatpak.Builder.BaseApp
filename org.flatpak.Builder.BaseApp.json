@@ -7,7 +7,8 @@
     "separate-locales": false,
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable",
-        "org.freedesktop.Sdk.Extension.llvm18"
+        "org.freedesktop.Sdk.Extension.llvm18",
+        "org.freedesktop.Sdk.Extension.node24"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm18/bin",
@@ -20,6 +21,7 @@
     "cleanup": [
         "*.a",
         "*.la",
+        "/bin/__pycache__",
         "/build-1",
         "/etc",
         "/lib/cmake",
@@ -647,6 +649,8 @@
                     "sha256": "ae2192283eb645ccab189b1dfd8b13d3264eae631469a903c0e0f2dffce65e3b"
                 }
             ]
-        }
+        },
+        "python3-flathub-repro-checker.json",
+        "diffoscope-analysers.json"
     ]
 }
