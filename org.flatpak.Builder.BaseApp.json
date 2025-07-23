@@ -500,8 +500,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ostreedev/ostree/releases/download/v2025.3/libostree-2025.3.tar.xz",
-                    "sha256": "bbda48e59c85fe8af6482d161e4ddf3509bd808286b0ee5cd3e6489e16a3694d",
+                    "url": "https://github.com/ostreedev/ostree/releases/download/v2025.4/libostree-2025.4.tar.xz",
+                    "sha256": "014d12d19ea664fae53fe147d3d2c0b7465a3c37e099c87d289df908adeb5669",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/ostreedev/ostree/releases/latest",
