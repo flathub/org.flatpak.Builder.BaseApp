@@ -92,7 +92,7 @@
             "name": "fontforge",
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "config-opts":[
+            "config-opts": [
                 "-DENABLE_GUI=OFF",
                 "-DENABLE_LIBSPIRO=OFF",
                 "-DENABLE_DOCS=OFF",
@@ -154,8 +154,8 @@
                 "electron-asar-yarn-sources.json",
                 {
                     "type": "archive",
-                    "url": "https://github.com/electron/asar/archive/refs/tags/v4.0.0.tar.gz",
-                    "sha256": "309ee3662aaeebf60ccf3d4ec7be43022114cc035d2a481deb50651d8f627643",
+                    "url": "https://github.com/electron/asar/archive/refs/tags/v4.0.1.tar.gz",
+                    "sha256": "b8b40ad6a61986e161b8d0b5eae00aed2d8b80430c126eb4dfe50c5803c2bd21",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/electron/asar/releases/latest",
