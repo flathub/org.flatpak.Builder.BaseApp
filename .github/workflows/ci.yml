@@ -65,7 +65,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        flatpak install -y --user flathub org.freedesktop.{Platform,Sdk{,.Extension.{rust-stable,llvm18,node24}}}//$BASEAPP_RUNTIME_VERSION
+        flatpak install -y --user flathub org.freedesktop.{Platform,Sdk{,.Extension.{rust-stable,llvm20,node24}}}//$BASEAPP_RUNTIME_VERSION
 
     - name: Allow file:// clones with git>=2.38.1
       run: |
