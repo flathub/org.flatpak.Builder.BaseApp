@@ -558,6 +558,10 @@
                         "stable-only": true,
                         "url-template": "https://downloads.sourceforge.net/xmlstar/xmlstarlet-$version.tar.gz"
                     }
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/xmlstarlet-1.6.1-libxml2-2.14.0-compile.patch"
                 }
             ],
             "post-install": [
