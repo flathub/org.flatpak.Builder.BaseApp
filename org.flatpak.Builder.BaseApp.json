@@ -51,8 +51,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "ac309f70c5d6b122c82e6138ce82cb65ca5d8595cc09d11751fbc4e3907e1a05",
-                    "url": "https://github.com/cli/cli/releases/download/v2.78.0/gh_2.78.0_linux_amd64.tar.gz",
+                    "sha256": "e7af0c72a607c0528fda1989f7c8e3be85e67d321889002af0e2938ad9c8fb68",
+                    "url": "https://github.com/cli/cli/releases/download/v2.79.0/gh_2.79.0_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -65,8 +65,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "9e3ca75b227a5503f6ef92c4b8b6dbf94e34bfdd8069ac0f16b8739856ebba7b",
-                    "url": "https://github.com/cli/cli/releases/download/v2.78.0/gh_2.78.0_linux_arm64.tar.gz",
+                    "sha256": "1b91e546b30181a8ee6d8c72bbf59eaadbb0600bab014dfbcc199676c83ea102",
+                    "url": "https://github.com/cli/cli/releases/download/v2.79.0/gh_2.79.0_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -313,8 +313,8 @@
                         {
                             "type": "git",
                             "url": "https://github.com/JuliaStrings/utf8proc.git",
-                            "tag": "v2.10.0",
-                            "commit": "a1b99daa2a3393884220264c927a48ba1251a9c6",
+                            "tag": "v2.11.0",
+                            "commit": "d7bf128df773c2a1a7242eb80e51e91a769fc985",
                             "x-checker-data": {
                                 "type": "git",
                                 "tag-pattern": "^v([\\d.]+)$"
