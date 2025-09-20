@@ -655,6 +655,22 @@
             ]
         },
         "python3-flathub-repro-checker.json",
-        "diffoscope-analysers.json"
+        "diffoscope-analysers.json",
+        {
+            "name": "libfyaml",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/pantoniou/libfyaml/releases/download/v0.9/libfyaml-0.9.tar.gz",
+                    "sha256": "7731edc5dfcc345d5c5c9f6ce597133991a689dabede393cd77bae89b327cd6d",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 383614,
+                        "stable-only": true,
+                        "url-template": "https://github.com/pantoniou/libfyaml/releases/download/v$version/libfyaml-$version.tar.gz"
+                    }
+                }
+            ]
+        }
     ]
 }
