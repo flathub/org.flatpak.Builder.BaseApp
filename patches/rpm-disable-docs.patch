@@ -1,0 +1,27 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 30ed034..dc18aed 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -312,13 +312,7 @@ find_program(FIND_DEBUGINFO find-debuginfo)
+ mark_as_advanced(FIND_DEBUGINFO)
+ 
+ find_program(PODMAN podman)
+-mark_as_advanced(PODMAN)
+-
+-find_program(SCDOC NAMES scdoc REQUIRED)
+-mark_as_advanced(SCDOC)
+-
+-find_program(SCD2HTML NAMES scd2html)
+-mark_as_advanced(SCD2HTML)
++mark_as_advanced(PODMAN) 
+ 
+ function(chkdef func req)
+ 	string(TOUPPER ${func} FUNC)
+@@ -446,7 +440,6 @@ include_directories(${CMAKE_SOURCE_DIR}/misc)
+ # public headers
+ include_directories(${CMAKE_SOURCE_DIR}/include)
+ 
+-add_subdirectory(docs)
+ add_subdirectory(include/rpm)
+ add_subdirectory(misc)
+ add_subdirectory(rpmio)
