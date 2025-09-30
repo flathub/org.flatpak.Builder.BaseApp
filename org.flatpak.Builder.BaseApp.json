@@ -259,6 +259,10 @@
                         "stable-only": true,
                         "url-template": "https://github.com/rpm-software-management/rpm/archive/refs/tags/rpm-$version.tar.gz"
                     }
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/rpm-disable-docs.patch"
                 }
             ]
         },
