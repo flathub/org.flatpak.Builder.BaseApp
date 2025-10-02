@@ -262,7 +262,10 @@
                 },
                 {
                     "type": "patch",
-                    "path": "patches/rpm-disable-docs.patch"
+                    "paths": [
+                        "patches/rpm-disable-docs.patch",
+                        "patches/rpm-fix-build-with-no-sequoia.patch"
+                    ]
                 }
             ]
         },
