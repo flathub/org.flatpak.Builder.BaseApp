@@ -118,10 +118,6 @@
                         "project-id": 5807,
                         "url-template": "https://github.com/fontforge/fontforge/releases/download/$version/fontforge-$version.tar.xz"
                     }
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/fontforge-po.patch"
                 }
             ]
         },
