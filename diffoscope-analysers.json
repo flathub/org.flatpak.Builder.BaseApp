@@ -111,8 +111,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/fontforge/fontforge/releases/download/20230101/fontforge-20230101.tar.xz",
-                    "sha256": "ca82ec4c060c4dda70ace5478a41b5e7b95eb035fe1c4cf85c48f996d35c60f8",
+                    "url": "https://github.com/fontforge/fontforge/releases/download/20251009/fontforge-20251009.tar.xz",
+                    "sha256": "69046500185a5581b58139dfad30c0b3d8128f00ebbfddc31f2fcf877e329e52",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 5807,
