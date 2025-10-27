@@ -51,8 +51,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "aba32dd552112101464941c7b5ee5f097896e1e234eb99581ff1652f44c4009a",
-                    "url": "https://github.com/cli/cli/releases/download/v2.82.0/gh_2.82.0_linux_amd64.tar.gz",
+                    "sha256": "afada88676dfccea384e6cc28ae990b3e31bbc55f9d75c4697f902c757fa462b",
+                    "url": "https://github.com/cli/cli/releases/download/v2.82.1/gh_2.82.1_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -65,8 +65,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "b67206677153562deaa45382227123b1313bd0b304ac8e3239923dd5a671d4c1",
-                    "url": "https://github.com/cli/cli/releases/download/v2.82.0/gh_2.82.0_linux_arm64.tar.gz",
+                    "sha256": "80b467daabeabf4379b5b7138f4b8b47f56670cc615ab288361a602ce413d8bf",
+                    "url": "https://github.com/cli/cli/releases/download/v2.82.1/gh_2.82.1_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
