@@ -51,8 +51,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "a5cf6cdb40fc67751adf561126b3314044779cea81ba4f254fbe8e9a69f1676f",
-                    "url": "https://github.com/cli/cli/releases/download/v2.83.0/gh_2.83.0_linux_amd64.tar.gz",
+                    "sha256": "1c5252d4ce3db07b51c01ff0b909583da6364ff3fdc06d0c2e75e62dc0380a34",
+                    "url": "https://github.com/cli/cli/releases/download/v2.83.1/gh_2.83.1_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -65,8 +65,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "12311e320d4cfdb54d7fa2d58cd1e3a2ccb4c12e1c3abb32b0a2e48bd0f991bf",
-                    "url": "https://github.com/cli/cli/releases/download/v2.83.0/gh_2.83.0_linux_arm64.tar.gz",
+                    "sha256": "36af472f8e96fd67253f813f71d9610624cc4e3c7a5b148459e42ffa1a933f64",
+                    "url": "https://github.com/cli/cli/releases/download/v2.83.1/gh_2.83.1_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -90,8 +90,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.43.0/just-1.43.0-x86_64-unknown-linux-musl.tar.gz",
-                    "sha256": "a1bc93654f31669fd964ea3011a5e5e9676b9b6f8adcd762606e5140632ea72d",
+                    "url": "https://github.com/casey/just/releases/download/1.43.1/just-1.43.1-x86_64-unknown-linux-musl.tar.gz",
+                    "sha256": "6a3003f68fa4d86ada8afe33830a88ffdb6c2fcaff4e5a840b1cb90eaf6f46fc",
                     "only_arches": [
                         "x86_64"
                     ],
@@ -106,8 +106,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.43.0/just-1.43.0-aarch64-unknown-linux-musl.tar.gz",
-                    "sha256": "4fcd8310081c32742eb984b1fdd0eee2e5d4d0f1be9629318012d42606ec9b3e",
+                    "url": "https://github.com/casey/just/releases/download/1.43.1/just-1.43.1-aarch64-unknown-linux-musl.tar.gz",
+                    "sha256": "e28e1f18cecd45d35f9fb39ef3651dd79c0623cb29a2f375ea7a1a185ac32dc9",
                     "only_arches": [
                         "aarch64"
                     ],
@@ -320,8 +320,8 @@
                         {
                             "type": "git",
                             "url": "https://github.com/JuliaStrings/utf8proc.git",
-                            "tag": "v2.11.0",
-                            "commit": "d7bf128df773c2a1a7242eb80e51e91a769fc985",
+                            "tag": "v2.11.1",
+                            "commit": "53f0bac76f5d5bd3ed69d1a06ee5b200c8940610",
                             "x-checker-data": {
                                 "type": "git",
                                 "tag-pattern": "^v([\\d.]+)$"
@@ -509,8 +509,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ostreedev/ostree/releases/download/v2025.6/libostree-2025.6.tar.xz",
-                    "sha256": "6750627df600f28c8ef2c7f443a9d72aef7061a342cde234162ebdf850a7e575",
+                    "url": "https://github.com/ostreedev/ostree/releases/download/v2025.7/libostree-2025.7.tar.xz",
+                    "sha256": "af8d080b9585e7fd1faba8f022967e1c268ae62e20ecf32ee7b364c1e307570b",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/ostreedev/ostree/releases/latest",
