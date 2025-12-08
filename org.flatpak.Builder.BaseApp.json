@@ -90,8 +90,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.43.1/just-1.43.1-x86_64-unknown-linux-musl.tar.gz",
-                    "sha256": "6a3003f68fa4d86ada8afe33830a88ffdb6c2fcaff4e5a840b1cb90eaf6f46fc",
+                    "url": "https://github.com/casey/just/releases/download/1.44.0/just-1.44.0-x86_64-unknown-linux-musl.tar.gz",
+                    "sha256": "892d229432f5ac56f8538ab9e115ce949d20541a5a15b93432687fb62dd21d97",
                     "only_arches": [
                         "x86_64"
                     ],
@@ -106,8 +106,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.43.1/just-1.43.1-aarch64-unknown-linux-musl.tar.gz",
-                    "sha256": "e28e1f18cecd45d35f9fb39ef3651dd79c0623cb29a2f375ea7a1a185ac32dc9",
+                    "url": "https://github.com/casey/just/releases/download/1.44.0/just-1.44.0-aarch64-unknown-linux-musl.tar.gz",
+                    "sha256": "9091286b238e86bc9103a765246e2d88508190be993721eea1d8eb98d5999d52",
                     "only_arches": [
                         "aarch64"
                     ],
