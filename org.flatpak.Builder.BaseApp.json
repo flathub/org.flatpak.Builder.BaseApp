@@ -51,8 +51,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "1c5252d4ce3db07b51c01ff0b909583da6364ff3fdc06d0c2e75e62dc0380a34",
-                    "url": "https://github.com/cli/cli/releases/download/v2.83.1/gh_2.83.1_linux_amd64.tar.gz",
+                    "sha256": "ca6e7641214fbd0e21429cec4b64a7ba626fd946d8f9d6d191467545b092015e",
+                    "url": "https://github.com/cli/cli/releases/download/v2.83.2/gh_2.83.2_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -65,8 +65,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "36af472f8e96fd67253f813f71d9610624cc4e3c7a5b148459e42ffa1a933f64",
-                    "url": "https://github.com/cli/cli/releases/download/v2.83.1/gh_2.83.1_linux_arm64.tar.gz",
+                    "sha256": "b1a0c0a0fcf18524e36996caddc92a062355ed014defc836203fe20fba75a38e",
+                    "url": "https://github.com/cli/cli/releases/download/v2.83.2/gh_2.83.2_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -90,8 +90,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.44.0/just-1.44.0-x86_64-unknown-linux-musl.tar.gz",
-                    "sha256": "892d229432f5ac56f8538ab9e115ce949d20541a5a15b93432687fb62dd21d97",
+                    "url": "https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-x86_64-unknown-linux-musl.tar.gz",
+                    "sha256": "dc3f958aaf8c6506dd90426e9b03f86dd15e74a6467ee0e54929f750af3d9e49",
                     "only_arches": [
                         "x86_64"
                     ],
@@ -106,8 +106,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.44.0/just-1.44.0-aarch64-unknown-linux-musl.tar.gz",
-                    "sha256": "9091286b238e86bc9103a765246e2d88508190be993721eea1d8eb98d5999d52",
+                    "url": "https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-aarch64-unknown-linux-musl.tar.gz",
+                    "sha256": "e9d629d3903ea2b6b2bbcb569e69d62bc80b0e6adcce280094c8ffb6dbdf83d2",
                     "only_arches": [
                         "aarch64"
                     ],
@@ -251,8 +251,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/rpm-software-management/rpm/archive/refs/tags/rpm-6.0.0-release.tar.gz",
-                    "sha256": "babb24be54c3ad493dba712b6cb3d6696c9a0125ef916c92d212c3325a1bf69b",
+                    "url": "https://github.com/rpm-software-management/rpm/archive/refs/tags/rpm-6.0.1-release.tar.gz",
+                    "sha256": "9796904971f186dd908d001f8d36bbed5436e5b9bc9c9eb98f7e1357ccb2a98d",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 15204,
