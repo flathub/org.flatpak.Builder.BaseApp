@@ -90,6 +90,10 @@ jobs:
           --install --keep-build-dirs builddir \
           org.flatpak.Builder.BaseApp-modified.json
 
+    - name: Remove SDK extensions to prevent implicit dependencies
+      run: |
+        flatpak uninstall -y --noninteractive --force-remove org.freedesktop.Sdk.Extension.{rust-stable,llvm20,node24}//$BASEAPP_RUNTIME_VERSION
+
     - name: Build org.flatpak.Builder
       run: |
         git clone --depth=1 --branch master --recursive --single-branch https://github.com/flathub/org.flatpak.Builder.git
