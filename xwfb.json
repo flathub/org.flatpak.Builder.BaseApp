@@ -168,10 +168,6 @@
                         "stable-only": true,
                         "url-template": "https://gitlab.freedesktop.org/wayland/weston/-/archive/$version/weston-$version.tar.gz"
                     }
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/libdisplay_info_relax.patch"
                 }
             ]
         }
