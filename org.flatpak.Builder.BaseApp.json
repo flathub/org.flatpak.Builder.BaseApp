@@ -679,8 +679,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/pantoniou/libfyaml.git",
-                    "tag": "v0.9.3",
-                    "commit": "433d75fabd2b746e11c01d66348549625653e961",
+                    "tag": "v0.9.4",
+                    "commit": "cd5f869cb937d0e9db11073d64e8758a7a7c978a",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
