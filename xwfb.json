@@ -25,8 +25,8 @@
                     "type": "archive",
                     "url": "https://bitmath.org/code/mtdev/mtdev-1.1.7.tar.bz2",
                     "mirror-urls": [
-                      "https://ftp2.osuosl.org/pub/blfs/development/m/mtdev-1.1.7.tar.bz2",
-                      "https://gentoo.mirror.root.lu/distfiles/e8/mtdev-1.1.7.tar.bz2"
+                        "https://ftp2.osuosl.org/pub/blfs/development/m/mtdev-1.1.7.tar.bz2",
+                        "https://gentoo.mirror.root.lu/distfiles/e8/mtdev-1.1.7.tar.bz2"
                     ],
                     "sha256": "a107adad2101fecac54ac7f9f0e0a0dd155d954193da55c2340c97f2ff1d814e",
                     "x-checker-data": {
@@ -117,8 +117,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/vcrhonek/hwdata.git",
-                    "tag": "v0.403",
-                    "commit": "bb56be59220b34d79160b73bd24eb36952dc8c63",
+                    "tag": "v0.404",
+                    "commit": "428ad3882fff801c553fc575d99bcdb2edbd41f7",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/vcrhonek/hwdata/releases/latest",
@@ -160,8 +160,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.freedesktop.org/wayland/weston/-/archive/14.0.2/weston-14.0.2.tar.gz",
-                    "sha256": "633f4e0f232ad150300c95ffcbc646fedf1349487bf389dbd2045fa69013d6e2",
+                    "url": "https://gitlab.freedesktop.org/wayland/weston/-/archive/14.0.95/weston-14.0.95.tar.gz",
+                    "sha256": "fa9854bbb466a9f4bed1bd06fb5cbe4a4b451cccda8ad7de2cb742797c34a785",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 13745,
