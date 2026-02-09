@@ -147,7 +147,6 @@
             "buildsystem": "meson",
             "config-opts": [
                 "-Dbackend-rdp=false",
-                "-Dscreenshare=false",
                 "-Dbackend-vnc=false",
                 "-Dremoting=false",
                 "-Dpipewire=false",
