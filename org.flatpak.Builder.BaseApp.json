@@ -96,10 +96,10 @@
                         "x86_64"
                     ],
                     "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 141393,
-                        "stable-only": true,
-                        "url-template": "https://github.com/casey/just/releases/download/$version/just-$version-x86_64-unknown-linux-musl.tar.gz"
+                        "type": "json",
+                        "url": "https://api.github.com/repos/casey/just/releases/latest",
+                        "version-query": ".tag_name",
+                        "url-query": ".assets[] | select(.name == \"just-\" + $version + \"-x86_64-unknown-linux-musl.tar.gz\") | .browser_download_url"
                     }
                 },
                 {
@@ -112,10 +112,10 @@
                         "aarch64"
                     ],
                     "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 141393,
-                        "stable-only": true,
-                        "url-template": "https://github.com/casey/just/releases/download/$version/just-$version-aarch64-unknown-linux-musl.tar.gz"
+                        "type": "json",
+                        "url": "https://api.github.com/repos/casey/just/releases/latest",
+                        "version-query": ".tag_name",
+                        "url-query": ".assets[] | select(.name == \"just-\" + $version + \"-aarch64-unknown-linux-musl.tar.gz\") | .browser_download_url"
                     }
                 }
             ]
