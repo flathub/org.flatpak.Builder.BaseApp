@@ -4,8 +4,8 @@
     "sources": [
         {
             "type": "archive",
-            "url": "https://gitlab.freedesktop.org/ofourdan/xwayland-run/-/archive/0.0.4/xwayland-run-0.0.4.tar.gz",
-            "sha256": "409eaf44938b120e8abe4e7c4a384d71d6ee1c72239f36e585fa0a2815d0fd8f",
+            "url": "https://gitlab.freedesktop.org/ofourdan/xwayland-run/-/archive/0.0.5/xwayland-run-0.0.5.tar.gz",
+            "sha256": "b000386a0f0270cf49d5207b60215de7a09423d8afe3a45fe3e315791667fbb5",
             "x-checker-data": {
                 "type": "anitya",
                 "project-id": 370600,
@@ -158,8 +158,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.freedesktop.org/wayland/weston/-/archive/14.0.97/weston-14.0.97.tar.gz",
-                    "sha256": "129c4e945bcc386b4f29e5c63eb61c91a2850eb18f63eb1f3516996e8df1bfe0",
+                    "url": "https://gitlab.freedesktop.org/wayland/weston/-/archive/15.0.0/weston-15.0.0.tar.gz",
+                    "sha256": "9e8d76a141a7a571558ac96357b285277a57ba99ae251ed62b0856a8cbc44c7b",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 13745,
