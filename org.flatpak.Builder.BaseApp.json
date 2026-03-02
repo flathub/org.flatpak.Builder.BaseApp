@@ -51,8 +51,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "18360b2243e3bf9c1457035db45f6400ae4cf957dcc2f674e69717b4e0b14d55",
-                    "url": "https://github.com/cli/cli/releases/download/v2.87.2/gh_2.87.2_linux_amd64.tar.gz",
+                    "sha256": "c6e5537631fca45f277ef405ce8751d139b491e9402cc20891a003525a8773b2",
+                    "url": "https://github.com/cli/cli/releases/download/v2.87.3/gh_2.87.3_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -65,8 +65,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "e37efdd8ec98425f44175040b5037c767bbd49f192aed1de5aabc4b4ea9e22c5",
-                    "url": "https://github.com/cli/cli/releases/download/v2.87.2/gh_2.87.2_linux_arm64.tar.gz",
+                    "sha256": "5f5d89563bf26751e2173b37e594065504e85b6b781c1f1832d24bf2c2b4554f",
+                    "url": "https://github.com/cli/cli/releases/download/v2.87.3/gh_2.87.3_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -679,8 +679,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/pantoniou/libfyaml.git",
-                    "tag": "v0.9.4",
-                    "commit": "cd5f869cb937d0e9db11073d64e8758a7a7c978a",
+                    "tag": "v0.9.5",
+                    "commit": "cee236b62d9f7a1e59d7a9042f231c9946d2a8c3",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
