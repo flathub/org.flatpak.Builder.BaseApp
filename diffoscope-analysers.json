@@ -154,13 +154,7 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/electron/asar/archive/refs/tags/v4.0.1.tar.gz",
-                    "sha256": "b8b40ad6a61986e161b8d0b5eae00aed2d8b80430c126eb4dfe50c5803c2bd21",
-                    "x-checker-data": {
-                        "type": "json",
-                        "url": "https://api.github.com/repos/electron/asar/releases/latest",
-                        "version-query": ".tag_name",
-                        "url-query": "\"https://github.com/electron/asar/archive/refs/tags/\\($version).tar.gz\""
-                    }
+                    "sha256": "b8b40ad6a61986e161b8d0b5eae00aed2d8b80430c126eb4dfe50c5803c2bd21"
                 },
                 {
                     "type": "script",
