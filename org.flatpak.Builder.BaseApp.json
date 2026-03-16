@@ -51,8 +51,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "c6e5537631fca45f277ef405ce8751d139b491e9402cc20891a003525a8773b2",
-                    "url": "https://github.com/cli/cli/releases/download/v2.87.3/gh_2.87.3_linux_amd64.tar.gz",
+                    "sha256": "36352a993b97e9758793cdb87f9ba674bd6d88c914488e122be78a1962203803",
+                    "url": "https://github.com/cli/cli/releases/download/v2.88.1/gh_2.88.1_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -65,8 +65,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "5f5d89563bf26751e2173b37e594065504e85b6b781c1f1832d24bf2c2b4554f",
-                    "url": "https://github.com/cli/cli/releases/download/v2.87.3/gh_2.87.3_linux_arm64.tar.gz",
+                    "sha256": "039ce25aab0cfa0ea5160e3db75ed44699bde4b20ff63ec5991f82201f1b33b8",
+                    "url": "https://github.com/cli/cli/releases/download/v2.88.1/gh_2.88.1_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -90,8 +90,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-x86_64-unknown-linux-musl.tar.gz",
-                    "sha256": "79966e6e353f535ee7d1c6221641bcc8e3381c55b0d0a6dc6e54b34f9db36eaa",
+                    "url": "https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-x86_64-unknown-linux-musl.tar.gz",
+                    "sha256": "8fade096b572733d978eaf9bd2178c9a6e706858efce19f8771a4108784eeea6",
                     "only_arches": [
                         "x86_64"
                     ],
@@ -106,8 +106,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-aarch64-unknown-linux-musl.tar.gz",
-                    "sha256": "b81970c8247fa64cfb30d2a3da0e487e4253f9f2d01865ed5e7d53cdc7b02188",
+                    "url": "https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-aarch64-unknown-linux-musl.tar.gz",
+                    "sha256": "ce47b6d5c27a5884c8983d3ebbc53ef9149c789349b8d62ba72ee592f53ae07d",
                     "only_arches": [
                         "aarch64"
                     ],
@@ -679,8 +679,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/pantoniou/libfyaml.git",
-                    "tag": "v0.9.5",
-                    "commit": "cee236b62d9f7a1e59d7a9042f231c9946d2a8c3",
+                    "tag": "v0.9.6",
+                    "commit": "1ed9bae3b1e5fc57e31a14a2ea12810fdf423473",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
