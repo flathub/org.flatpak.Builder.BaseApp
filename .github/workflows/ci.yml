@@ -101,7 +101,7 @@ jobs:
         jq '."runtime-version" = $ENV.BASEAPP_RUNTIME_VERSION | ."base-version" = "localtest"' org.flatpak.Builder.json >> org.flatpak.Builder-modified.json
         flatpak-builder --verbose --user --sandbox --force-clean --repo=repo \
           --default-branch=localtest --ccache \
-          --install --keep-build-dirs --disable-cache builddir \
+          --install --keep-build-dirs --disable-cache --install-deps-from=flathub builddir \
           org.flatpak.Builder-modified.json
 
     - name: Check if org.flatpak.Builder launches
