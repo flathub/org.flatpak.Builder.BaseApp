@@ -496,7 +496,6 @@
                 "cargo-sources-maturin.json"
             ]
         },
-        "flat-manager-client-deps.json",
         {
             "name": "ostree",
             "config-opts": [
