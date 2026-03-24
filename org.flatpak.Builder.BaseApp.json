@@ -496,6 +496,7 @@
                 "cargo-sources-maturin.json"
             ]
         },
+        "python3-modules.json",
         {
             "name": "ostree",
             "config-opts": [
