@@ -76,6 +76,11 @@
                 {
                     "type": "archive",
                     "url": "https://git.sr.ht/~kennylevinsen/seatd/archive/0.9.3.tar.gz",
+                     "mirror-urls": [
+                        "https://mirror.opensource.iu.edu/gentoo/distfiles/ae/seatd-0.9.3.tar.gz",
+                        "https://mirror.math.princeton.edu/pub/redcorelinux/amd64/distfiles/seatd-0.9.3.tar.gz",
+                        "https://ftp.fr.openbsd.org/pub/OpenBSD/distfiles/seatd-0.9.3.tar.gz"
+                     ],
                     "sha256": "302564d54d8e28191fadfd734f2675ecb0c9e0615a58011b89ef15dfa4dbaa96",
                     "x-checker-data": {
                         "type": "anitya",
