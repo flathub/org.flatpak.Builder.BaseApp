@@ -508,8 +508,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ostreedev/ostree/releases/download/v2025.7/libostree-2025.7.tar.xz",
-                    "sha256": "af8d080b9585e7fd1faba8f022967e1c268ae62e20ecf32ee7b364c1e307570b",
+                    "url": "https://github.com/ostreedev/ostree/releases/download/v2026.1/libostree-2026.1.tar.xz",
+                    "sha256": "8e77c285dd6fa5ec5fb063130390977be727fe11107335ed8778a40385069e95",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/ostreedev/ostree/releases/latest",
@@ -606,8 +606,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/flatpak/xdg-dbus-proxy/archive/refs/tags/0.1.6.tar.gz",
-                    "sha256": "ee9c1d665f4e3b025a83d522d478ff7930070f2817fc2cb446db0dca93c990b1",
+                    "url": "https://github.com/flatpak/xdg-dbus-proxy/archive/refs/tags/0.1.7.tar.gz",
+                    "sha256": "232d2eb9b456fa1e307322da1bfeb4849eb410750a2a16a5de51ed2c2eb919e6",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 58434,
