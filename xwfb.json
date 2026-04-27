@@ -76,11 +76,11 @@
                 {
                     "type": "archive",
                     "url": "https://git.sr.ht/~kennylevinsen/seatd/archive/0.9.3.tar.gz",
-                     "mirror-urls": [
+                    "mirror-urls": [
                         "https://mirror.opensource.iu.edu/gentoo/distfiles/ae/seatd-0.9.3.tar.gz",
                         "https://mirror.math.princeton.edu/pub/redcorelinux/amd64/distfiles/seatd-0.9.3.tar.gz",
                         "https://ftp.fr.openbsd.org/pub/OpenBSD/distfiles/seatd-0.9.3.tar.gz"
-                     ],
+                    ],
                     "sha256": "302564d54d8e28191fadfd734f2675ecb0c9e0615a58011b89ef15dfa4dbaa96",
                     "x-checker-data": {
                         "type": "anitya",
@@ -163,8 +163,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.freedesktop.org/wayland/weston/-/archive/15.0.0/weston-15.0.0.tar.gz",
-                    "sha256": "9e8d76a141a7a571558ac96357b285277a57ba99ae251ed62b0856a8cbc44c7b",
+                    "url": "https://gitlab.freedesktop.org/wayland/weston/-/archive/15.0.1/weston-15.0.1.tar.gz",
+                    "sha256": "dbcedc27f880d1f10a9edc010a9ea044a6a2861269f2aa3c8647cc557a3fd73a",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 13745,
