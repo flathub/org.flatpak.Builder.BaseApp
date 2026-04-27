@@ -100,8 +100,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://xorg.freedesktop.org/archive/individual/font/font-util-1.4.1.tar.gz",
-                    "sha256": "f029ae80cdd75d89bee7f7af61c21e07982adfb9f72344a158b99f91f77ef5ed",
+                    "url": "https://xorg.freedesktop.org/archive/individual/font/font-util-1.4.2.tar.gz",
+                    "sha256": "6ccf9a65f4c229c611680251f1125f4c9a2071eeb13433c66ac146fe2d4c0d6c",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 15055,

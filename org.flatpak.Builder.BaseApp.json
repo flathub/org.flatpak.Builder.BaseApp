@@ -51,8 +51,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "b2aef7b23ec6899bf27f37a32c57a7935d0a178568ac33dc9bb03842f724195a",
-                    "url": "https://github.com/cli/cli/releases/download/v2.90.0/gh_2.90.0_linux_amd64.tar.gz",
+                    "sha256": "304a0d2460f4a8847d2f192bad4e2a32cd9420d28716e7ae32198181b65b5f9c",
+                    "url": "https://github.com/cli/cli/releases/download/v2.91.0/gh_2.91.0_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -65,8 +65,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "1139e1ad912fcddb5ef4b957530184c2c30d9937ff65ff4e641fbf6ca5f28c7c",
-                    "url": "https://github.com/cli/cli/releases/download/v2.90.0/gh_2.90.0_linux_arm64.tar.gz",
+                    "sha256": "ccbed39c472d3dc1c501d1e164a9cffd934c5f6fce1012811a1a59d24cb7d7c6",
+                    "url": "https://github.com/cli/cli/releases/download/v2.91.0/gh_2.91.0_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -585,8 +585,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/projectatomic/bubblewrap/archive/refs/tags/v0.11.1.tar.gz",
-                    "sha256": "fb6ebf0264dfe9fb88777d352deeedf5aecf2e36e78da148157036b647f86e0f",
+                    "url": "https://github.com/projectatomic/bubblewrap/archive/refs/tags/v0.11.2.tar.gz",
+                    "sha256": "3fc7b94dd133539365dc573fe79d207802ce433e6e34b791a8b1080b17803a28",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10937,
