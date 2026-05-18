@@ -13,8 +13,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/xyproto/tinyxxd/archive/refs/tags/v1.3.15.tar.gz",
-                    "sha256": "4a0103c8a386443e9c6c893d7f01c0c8b3f5f92c3dc4bcbb0ae6570ac6289c1d",
+                    "url": "https://github.com/xyproto/tinyxxd/archive/refs/tags/v1.3.16.tar.gz",
+                    "sha256": "f74a3cbcdd3166f0f966f97ad483a60a34b53a09abd9ba63783c0958640ca9d9",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/xyproto/tinyxxd/releases/latest",
