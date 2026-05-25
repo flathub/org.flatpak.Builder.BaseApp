@@ -207,8 +207,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/snowballstem/snowball.git",
-                    "tag": "v3.0.1",
-                    "commit": "e4b3efb449ccb994d39230eb6e8440d267471f4a",
+                    "tag": "v3.1.0",
+                    "commit": "77e07c9c19b89266632b47a4321b33f2106135bb",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
