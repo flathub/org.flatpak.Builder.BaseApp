@@ -122,8 +122,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/vcrhonek/hwdata.git",
-                    "tag": "v0.409",
-                    "commit": "73fa04de426aefe192505fcbc6c24237a9fd9c9b",
+                    "tag": "v0.410",
+                    "commit": "8bb6c48dc2e683777e625d1c9ef02c1b25b741cd",
                     "x-checker-data": {
                         "type": "git"
                     }
@@ -136,8 +136,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.freedesktop.org/emersion/libdisplay-info/-/archive/0.3.0/libdisplay-info-0.3.0.tar.gz",
-                    "sha256": "2b467e3336aec63819d6aca28d7310d3dc7415b2b3a3c3a5aec9d3727053c078",
+                    "url": "https://gitlab.freedesktop.org/emersion/libdisplay-info/-/archive/0.4.0/libdisplay-info-0.4.0.tar.gz",
+                    "sha256": "787b58aec473830b0030251ba2b880560b4b3853dc5d6961a6e9701abae29b55",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 326668,
@@ -163,8 +163,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.freedesktop.org/wayland/weston/-/archive/15.0.1/weston-15.0.1.tar.gz",
-                    "sha256": "dbcedc27f880d1f10a9edc010a9ea044a6a2861269f2aa3c8647cc557a3fd73a",
+                    "url": "https://gitlab.freedesktop.org/wayland/weston/-/archive/16.0.0/weston-16.0.0.tar.gz",
+                    "sha256": "6a81af51045ccb2813f3a1d63ff8a66c121743c1a5ff3ce78388660bf650c55c",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 13745,
