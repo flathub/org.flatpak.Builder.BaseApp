@@ -51,8 +51,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "sha256": "83d5c2ccad5498f58bf6368acb1ab32588cf43ab3a4b1c301bf36328b1c8bd60",
-                    "url": "https://github.com/cli/cli/releases/download/v2.96.0/gh_2.96.0_linux_amd64.tar.gz",
+                    "sha256": "3b8ac6b30336802fc1a858d7c084e11cdf24ac1a761ca90b68022d7d729208de",
+                    "url": "https://github.com/cli/cli/releases/download/v2.98.0/gh_2.98.0_linux_amd64.tar.gz",
                     "only-arches": [
                         "x86_64"
                     ],
@@ -65,8 +65,8 @@
                 },
                 {
                     "type": "archive",
-                    "sha256": "06f86ec7103d41993b76cd78072f43595c34aaa56506d971d9860e67140bf909",
-                    "url": "https://github.com/cli/cli/releases/download/v2.96.0/gh_2.96.0_linux_arm64.tar.gz",
+                    "sha256": "cf689084f3a3618f7eae4a2420d335d74626d65f5e594b9828d125d69f800d86",
+                    "url": "https://github.com/cli/cli/releases/download/v2.98.0/gh_2.98.0_linux_arm64.tar.gz",
                     "only-arches": [
                         "aarch64"
                     ],
@@ -90,8 +90,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.56.0/just-1.56.0-x86_64-unknown-linux-musl.tar.gz",
-                    "sha256": "fa2a8ec1015d9df5330941ade12437488fc40d33f9c9f8cd4eb70a26de11b639",
+                    "url": "https://github.com/casey/just/releases/download/1.58.0/just-1.58.0-x86_64-unknown-linux-musl.tar.gz",
+                    "sha256": "4a5cc2f53e6f0f8c59092a6cc38291eb729d46a7dd95d3ae582008881b84931d",
                     "only_arches": [
                         "x86_64"
                     ],
@@ -106,8 +106,8 @@
                     "type": "archive",
                     "strip-components": 0,
                     "dest-filename": "just.tar.gz",
-                    "url": "https://github.com/casey/just/releases/download/1.56.0/just-1.56.0-aarch64-unknown-linux-musl.tar.gz",
-                    "sha256": "c8c1d656e9f47569ec1ae2bf8779af2621cdeea6bbbba3b0cacd64f951d25e2b",
+                    "url": "https://github.com/casey/just/releases/download/1.58.0/just-1.58.0-aarch64-unknown-linux-musl.tar.gz",
+                    "sha256": "748237128c4c40cbdabc65e841d05ceba13cc23a91eaba395495894c1d9764df",
                     "only_arches": [
                         "aarch64"
                     ],
@@ -251,8 +251,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/rpm-software-management/rpm/archive/refs/tags/rpm-6.0.1-release.tar.gz",
-                    "sha256": "9796904971f186dd908d001f8d36bbed5436e5b9bc9c9eb98f7e1357ccb2a98d",
+                    "url": "https://github.com/rpm-software-management/rpm/archive/refs/tags/rpm-6.1.0-release.tar.gz",
+                    "sha256": "e33a48460c7c23c564bee11fdb08b2883f724feb44ad6ba2ebe55bc55349da00",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 15204,
@@ -508,8 +508,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/ostreedev/ostree/releases/download/v2026.2/libostree-2026.2.tar.xz",
-                    "sha256": "a281f2db631f3721ecd4b9e2779a1eaf56e2d03f2cc47629a9f0117f12016a83",
+                    "url": "https://github.com/ostreedev/ostree/releases/download/v2026.4/libostree-2026.4.tar.xz",
+                    "sha256": "b26c9016eb03bb4ee52cc00c642d56e00fc79ae7faac6bf4aa317d7451339ef7",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/ostreedev/ostree/releases/latest",
@@ -606,8 +606,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/flatpak/xdg-dbus-proxy/archive/refs/tags/0.1.7.tar.gz",
-                    "sha256": "232d2eb9b456fa1e307322da1bfeb4849eb410750a2a16a5de51ed2c2eb919e6",
+                    "url": "https://github.com/flatpak/xdg-dbus-proxy/archive/refs/tags/0.1.8.tar.gz",
+                    "sha256": "722e2a327acd2cd053b864e65f2f507ba02f966d3622a50040f4e3486f50c9c4",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 58434,
