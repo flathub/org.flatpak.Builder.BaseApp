@@ -65,7 +65,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        flatpak install -y --user flathub org.freedesktop.{Platform,Sdk{,.Extension.{rust-stable,llvm22,node24}}}//$BASEAPP_RUNTIME_VERSION
+        flatpak install -y --user flathub org.freedesktop.{Platform,Sdk{,.Extension.{rust-stable,llvm22,node26}}}//$BASEAPP_RUNTIME_VERSION
 
     - name: Allow file:// clones with git>=2.38.1
       run: |
@@ -92,7 +92,7 @@ jobs:
 
     - name: Remove SDK extensions to prevent implicit dependencies
       run: |
-        flatpak uninstall -y --noninteractive --force-remove org.freedesktop.Sdk.Extension.{rust-stable,llvm22,node24}//$BASEAPP_RUNTIME_VERSION
+        flatpak uninstall -y --noninteractive --force-remove org.freedesktop.Sdk.Extension.{rust-stable,llvm22,node26}//$BASEAPP_RUNTIME_VERSION
 
     - name: Build org.flatpak.Builder
       run: |

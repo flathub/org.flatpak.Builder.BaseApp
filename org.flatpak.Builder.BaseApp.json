@@ -8,7 +8,7 @@
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable",
         "org.freedesktop.Sdk.Extension.llvm22",
-        "org.freedesktop.Sdk.Extension.node24"
+        "org.freedesktop.Sdk.Extension.node26"
     ],
     "build-options": {
         "append-path": "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm22/bin",

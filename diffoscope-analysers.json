@@ -125,9 +125,9 @@
             "name": "node",
             "buildsystem": "simple",
             "build-commands": [
-                "cp -a /usr/lib/sdk/node24/bin/* ${FLATPAK_DEST}/bin",
-                "cp -a /usr/lib/sdk/node24/lib/* ${FLATPAK_DEST}/lib",
-                "cp -ra /usr/lib/sdk/node24/share/yarn ${FLATPAK_DEST}/share"
+                "cp -a /usr/lib/sdk/node26/bin/* ${FLATPAK_DEST}/bin",
+                "cp -a /usr/lib/sdk/node26/lib/* ${FLATPAK_DEST}/lib",
+                "cp -ra /usr/lib/sdk/node26/share/yarn ${FLATPAK_DEST}/share"
             ]
         },
         {
