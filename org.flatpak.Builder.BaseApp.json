@@ -221,6 +221,29 @@
             ]
         },
         {
+            "name": "libxmlb",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dintrospection=false",
+                "-Dgtkdoc=false",
+                "-Dtests=false",
+                "-Dstemmer=false",
+                "-Dcli=false"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/hughsie/libxmlb/releases/download/0.3.29/libxmlb-0.3.29.tar.xz",
+                    "sha256": "448294be33bfae62f00fa66e506f1cae80237ce71b7ab6530aefa75005eeb08a",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 179028,
+                        "url-template": "https://github.com/hughsie/libxmlb/releases/download/$version/libxmlb-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
             "name": "popt",
             "sources": [
                 {
