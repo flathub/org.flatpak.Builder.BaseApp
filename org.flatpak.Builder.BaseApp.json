@@ -7,11 +7,11 @@
     "separate-locales": false,
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable",
-        "org.freedesktop.Sdk.Extension.llvm20",
+        "org.freedesktop.Sdk.Extension.llvm22",
         "org.freedesktop.Sdk.Extension.node24"
     ],
     "build-options": {
-        "append-path": "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm20/bin",
+        "append-path": "/usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/llvm22/bin",
         "env": {
             "BASH_COMPLETIONSDIR": "/app/share/bash-completion/completions",
             "MOUNT_FUSE_PATH": "../tmp/",
