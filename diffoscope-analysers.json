@@ -141,7 +141,7 @@
             },
             "build-commands": [
                 "mkdir -p ${FLATPAK_DEST}/lib/asar/node_modules",
-                "HOME=$PWD yarn config --offline set yarn-offline-mirror $FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror",
+                "printf 'yarn-offline-mirror \"%s\"\\n' \"$FLATPAK_BUILDER_BUILDDIR/flatpak-node/yarn-mirror\" > .yarnrc",
                 "yarn install --frozen-lockfile --offline",
                 "yarn install --frozen-lockfile --offline --prod --modules-folder ${FLATPAK_DEST}/lib/asar/node_modules",
                 "yarn build",
