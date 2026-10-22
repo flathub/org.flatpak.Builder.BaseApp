@@ -721,6 +721,55 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "libblake3",
+            "buildsystem": "cmake-ninja",
+            "subdir": "c",
+            "config-opts": [
+                "-DBUILD_SHARED_LIBS=ON"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/BLAKE3-team/BLAKE3.git",
+                    "tag": "1.8.7",
+                    "commit": "f3149ec5bb5449af877ba20377a11008ff499fa2",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "libvips",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dmodules=disabled",
+                "-Dintrospection=disabled",
+                "-Dexamples=false",
+                "-Dcplusplus=false",
+                "-Ddeprecated=false",
+                "-Djpeg-xl=enabled",
+                "-Drsvg=enabled",
+                "-Dpng=enabled"
+            ],
+            "cleanup": [
+                "/bin/vips*"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/libvips/libvips.git",
+                    "tag": "v8.18.7",
+                    "commit": "24ad4d042940e6bf99a68871ba886ca8847c9c82",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
+                }
+            ]
         }
     ]
 }
