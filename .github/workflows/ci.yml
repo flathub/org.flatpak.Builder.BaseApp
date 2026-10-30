@@ -210,7 +210,7 @@ jobs:
         cd org.freedesktop.appstream.cli
         dbus-run-session flatpak run org.flatpak.Builder//localtest --verbose --user --sandbox \
           --force-clean --install-deps-from=flathub --default-branch=localtest \
-          --state-dir=../.flatpak-builder --ccache --disable-cache \
+          --state-dir=../.flatpak-builder --ccache --disable-cache --disable-rofiles-fuse \
           --install builddir org.freedesktop.appstream.cli.yaml
 
     - name: Build io.neovim.nvim with org.flatpak.Builder
@@ -219,5 +219,5 @@ jobs:
         cd io.neovim.nvim
         dbus-run-session flatpak run org.flatpak.Builder//localtest --verbose --user --sandbox \
           --force-clean --install-deps-from=flathub --default-branch=localtest \
-          --state-dir=../.flatpak-builder --ccache --disable-cache --mirror-screenshots-url=https://domain.tld \
+          --state-dir=../.flatpak-builder --ccache --disable-cache --disable-rofiles-fuse --mirror-screenshots-url=https://domain.tld \
           --install builddir io.neovim.nvim.yaml
